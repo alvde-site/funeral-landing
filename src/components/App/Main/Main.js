@@ -15,9 +15,9 @@ function Main(props) {
         onToggleBurger={props.onToggleBurger}
         isToggleBurger={props.isToggleBurger}
       />
-      <Advertisement onOpenFeedback={props.onOpenFeedback} />
+      <Advertisement />
       <Competence />
-      <Services onOpenFeedback={props.onOpenFeedback} />
+      <Services />
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}
@@ -25,10 +25,9 @@ function Main(props) {
       <Working />
       <Faq
         questionsDataList={props.questionsDataList}
-        onOpenFeedback={props.onOpenFeedback}
       />
       <About />
-      <Conditions onOpenFeedback={props.onOpenFeedback} />
+      <Conditions />
     </main>
   );
 }

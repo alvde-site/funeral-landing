@@ -122,10 +122,6 @@ function App() {
     setIsToggleBurger(!isToggleBurger);
   }
 
-  function handleOpenFeedbackForm() {
-    setIsOpenFeedBack(true);
-  }
-
   function closeAllPopups() {
     setIsOpenFeedBack(false);
     setSelectedImage(false);
@@ -290,7 +286,6 @@ function App() {
               <Main
                 isToggleBurger={isToggleBurger}
                 onToggleBurger={handleToggleBurger}
-                onOpenFeedback={handleOpenFeedbackForm}
                 portfolioImages={portfolioImages}
                 questionsDataList={questionsDataList}
                 onImageClick={handleImageClick}

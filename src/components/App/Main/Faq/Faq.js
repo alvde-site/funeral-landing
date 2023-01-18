@@ -1,9 +1,6 @@
 import FaqQuestion from "./FaqQuestion/FaqQustion";
 
 function Faq(props) {
-  function handleOpenFeedback() {
-    props.onOpenFeedback();
-  }
   return (
     <section className="faq" id={"faq"}>
       <h1 className="faq__title">Часто задаваемые вопросы</h1>
@@ -16,12 +13,6 @@ function Faq(props) {
                 return <FaqQuestion questionData={questionData} key={index} />;
               })}
             </ul>
-            <button
-              className="faq__feedback-button"
-              onClick={handleOpenFeedback}
-            >
-              Заказать
-            </button>
           </div>
         </div>
       </div>

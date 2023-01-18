@@ -5,10 +5,7 @@ import rectangle3 from "../../../../images/rectangle3.png";
 import rectangle4 from "../../../../images/rectangle4.png";
 import rectangle5 from "../../../../images/rectangle5.png";
 
-function Services(props) {
-  function handleOpenFeedback() {
-    props.onOpenFeedback();
-  }
+function Services() {
   return (
     <section className="services" id={"services"}>
       <h2 className="services__title">Каталог памятников</h2>
@@ -27,9 +24,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
         <li className="services__card">
           <img
@@ -44,9 +38,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
         <li className="services__card">
           <img
@@ -61,9 +52,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
         <li className="services__card">
           <img
@@ -78,9 +66,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
         <li className="services__card">
           <img
@@ -95,9 +80,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
         <li className="services__card">
           <img
@@ -110,9 +92,6 @@ function Services(props) {
           <p className="services__price-text">
             от <span className="service__price">300 BYN</span>
           </p>
-          <button className="services__feedback" onClick={handleOpenFeedback}>
-            Заказать
-          </button>
         </li>
       </ul>
     </section>

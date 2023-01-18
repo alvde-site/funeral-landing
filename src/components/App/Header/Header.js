@@ -4,7 +4,7 @@ function Header() {
       <div className="header__logo">
         <div className="header__logo-image"></div>
         <a href="#!" className="header__logo-link">
-          Памятники в Могилеве
+          Благоустройства в Могилеве
         </a>
       </div>
       <ul className="contacts">
@@ -21,7 +21,7 @@ function Header() {
         <li className="contacts__item">
           <h3 className="contacts__title">Телефон:</h3>
           <a href="tel:+375292415567" className="contacts__tel">
-            +375(29)2415567
+            +375(29) 241-55-67
           </a>
         </li>
       </ul>

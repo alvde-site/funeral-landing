@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <footer className="footer" id={"footer"}>
@@ -9,19 +7,19 @@ function Footer() {
             <div className="footer__logo" src="" alt=""></div>
           </li>
           <li className="footer__item">
-            <p className="footer__hours">Пн-пт с 00:00 до 00:00</p>
+            <p className="footer__hours">Круглосуточно</p>
           </li>
           <li className="footer__item">
             <a
               href="mailto:testform@sitepro.by"
               className="footer__email"
             >
-              alvde@yandex.ru
+              masel.s@mail.ru
             </a>
           </li>
           <li className="footer__item">
             <a href="tel:+375000000000" className="footer__tel">
-              +375(00) 000-00-00
+              +375(29) 241-55-67
             </a>
           </li>
         </ul>
@@ -52,11 +50,6 @@ function Footer() {
               <a href="/#about" className="footer__link">
                 О компании
               </a>
-            </li>
-            <li>
-              <Link to="/signin" className="footer__link">
-                Войти
-              </Link>
             </li>
           </ul>
         </nav>
