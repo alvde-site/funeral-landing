@@ -4,7 +4,7 @@ function Advertisement() {
     <section className="advertisement">
       <div className="advertisement__content">
         <h1 className="advertisement__title">
-          Благоустройства. Изготовление и установка памятников в Могилеве
+          Изготовление и установка памятников в Могилеве
         </h1>
         <p className="advertisement__subtitle">За 7 дней от 250 BYN</p>
         <div className="advertisement__info">

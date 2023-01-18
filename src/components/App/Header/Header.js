@@ -4,7 +4,7 @@ function Header() {
       <div className="header__logo">
         <div className="header__logo-image"></div>
         <a href="#!" className="header__logo-link">
-          Благоустройства в Могилеве
+          Благоустройство и памятники
         </a>
       </div>
       <ul className="contacts">
