@@ -11,8 +11,9 @@ function About() {
           alt="О нас"
         ></img>
         <div className="about__description">
-          <h3 className="about__description-title">
-            Гранитная мастерская "Ваше название"
+          <h3 className="about__description-title" style={{color: "red"}}>
+            Гранитная мастерская "Ваше название".
+            Я думаю, вместо этой фотографии должна быть твое фото.
           </h3>
           <p className="about__text">
             Мастерская по производству памятников, надгробий и мемориальных
