@@ -1,4 +1,4 @@
-import rectangle125 from "../../../../images/rectangle125.png";
+import me from "../../../../images/me-foto.jpg";
 
 function About() {
   return (
@@ -7,22 +7,14 @@ function About() {
       <div className="about__content">
         <img
           className="about__image"
-          src={rectangle125}
+          src={me}
           alt="О нас"
         ></img>
         <div className="about__description">
-          <h3 className="about__description-title" style={{color: "red"}}>
-            Гранитная мастерская "Ваше название".
-            Я думаю, вместо этой фотографии должна быть твое фото.
-          </h3>
-          <p className="about__text">
-            Мастерская по производству памятников, надгробий и мемориальных
-            комплексов из натурального гранита.
-          </p>
-          <h4 className="about__list-title">
-            Более 15 лет мы помогаем почтить память усопших и берем на себя все
+          <h3 className="about__list-title">
+            Более 15 лет я помогаю почтить память усопших и беру на себя все
             работы по оформлению места захоронения:
-          </h4>
+          </h3>
           <ul className="about__list">
             <li className="about__list-item">замеры</li>
             <li className="about__list-item">подбор материалов</li>
@@ -40,9 +32,9 @@ function About() {
             </li>
           </ul>
           <p className="about__text">
-            Мастерская выполняет заказы любой сложности от стандартных
+            Выполню заказы любой сложности от стандартных
             памятников до элегантных фигурных композиций с крестом, ангелом или
-            по индивидуальному эскизу клиента. В нашем арсенале более 10 видов
+            по индивидуальному эскизу клиента. В моем арсенале более 10 видов
             натурального гранита и мрамора, современное оборудование и
             собственное производство
           </p>

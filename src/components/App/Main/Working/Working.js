@@ -6,7 +6,7 @@ import angel from "../../../../images/svg/angel.svg";
 function Working() {
   return (
     <section className="working" id={"working"}>
-      <h1 className="working__title">Как мы работаем</h1>
+      <h1 className="working__title">Порядок работы</h1>
       <ul className="working__content">
         <li className="working__item">
           <img

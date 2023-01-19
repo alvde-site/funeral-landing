@@ -9,7 +9,7 @@ function Services() {
   return (
     <section className="services" id={"services"}>
       <h2 className="services__title">Каталог памятников</h2>
-      <p className="services__subtitle">Поможем вам с любой задачей</p>
+      <p className="services__subtitle">Помогу вам с любой задачей</p>
       <ul className="services__catalog">
         <li className="services__card">
           <img
