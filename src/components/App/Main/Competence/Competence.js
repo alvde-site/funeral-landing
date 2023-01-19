@@ -1,6 +1,6 @@
-import bless from "../../../../images/bless.png";
-import graveyard from "../../../../images/graveyard.png";
-import location from "../../../../images/location.png";
+import bless from "../../../../images/svg/bless.svg";
+import graveyard from "../../../../images/svg/graveyard.svg";
+import location from "../../../../images/svg/location.svg";
 
 function Competence() {
   return (
