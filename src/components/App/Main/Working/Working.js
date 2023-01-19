@@ -1,6 +1,6 @@
 import counseling from "../../../../images/svg/counseling.svg";
 import cemetery from "../../../../images/svg/cemetery.svg";
-import church from "../../../../images/church.png";
+import church from "../../../../images/svg/church.svg";
 import angel from "../../../../images/svg/angel.svg";
 
 function Working() {
