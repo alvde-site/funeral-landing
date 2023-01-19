@@ -1,7 +1,7 @@
-import counseling from "../../../../images/counseling.png";
-import cemetery from "../../../../images/cemetery.png";
+import counseling from "../../../../images/svg/counseling.svg";
+import cemetery from "../../../../images/svg/cemetery.svg";
 import church from "../../../../images/church.png";
-import angel from "../../../../images/angel.png";
+import angel from "../../../../images/svg/angel.svg";
 
 function Working() {
   return (
