@@ -94,4 +94,10 @@ export const servicesData = [
     image: rectangle1,
     price: "300 BYN",
   },
+  {
+    title: "Горизонтальные",
+    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
+    image: rectangle1,
+    price: "300 BYN",
+  },
 ];
