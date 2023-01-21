@@ -7,6 +7,9 @@ import horse from "../images/horse.jpg";
 import sleepangel from "../images/sleepangel.jpg";
 import child from "../images/child.jpg";
 
+import rectangle from "../images/rectangle.jpeg";
+import rectangle1 from "../images/rectangle1.jpeg";
+
 export const feedbackButton = document.querySelector(".header__feedback"); // Кнопка открытия popup формы заполнения профиля
 export const burger = document.querySelector(".burger-menu");
 export const navContent = document.querySelector(".topnav__content");
@@ -75,5 +78,20 @@ export const questionsDataList = [
     question: "Даете ли вы гарантию на гранитные памятники?",
     answer:
       "Да, гарантия на гранитные памятники в нашей мастерской составляет 20 лет",
+  },
+];
+
+export const servicesData = [
+  {
+    title: "Вертикальные",
+    desc: "Вертикальные памятники - классический вариант могильных надгробий",
+    image: rectangle,
+    price: "300 BYN",
+  },
+  {
+    title: "Горизонтальные",
+    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
+    image: rectangle1,
+    price: "300 BYN",
   },
 ];

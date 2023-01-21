@@ -17,7 +17,7 @@ function Main(props) {
       />
       <Advertisement />
       <Competence />
-      <Services />
+      <Services servicesData={props.servicesData}/>
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}

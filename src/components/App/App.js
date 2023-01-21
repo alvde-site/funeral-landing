@@ -11,7 +11,7 @@ import HandleFeedbackPopup from "./HandleFeedbackPopup/HandleFeedbackPopup";
 import ImagePopup from "./ImagePopup/ImagePopup";
 import PopupWithConfirmation from "./PopupWithConfirmation/PopupWithConfirmation";
 import { useFormWithValidation } from "../../utils/formValidator";
-import { portfolioImages, questionsDataList } from "../../utils/constants";
+import { portfolioImages, questionsDataList, servicesData } from "../../utils/constants";
 import ScrollUp from "./ScrollUp/ScrollUp";
 import EditClientPopup from "./EditClientPopup/EditClientPopup";
 import InfoTooltip from "./InfoTooltip/InfoTooltip";
@@ -287,6 +287,7 @@ function App() {
                 isToggleBurger={isToggleBurger}
                 onToggleBurger={handleToggleBurger}
                 portfolioImages={portfolioImages}
+                servicesData={servicesData}
                 questionsDataList={questionsDataList}
                 onImageClick={handleImageClick}
               />
