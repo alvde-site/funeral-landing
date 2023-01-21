@@ -6,6 +6,9 @@ import custle from "../images/custle.jpeg";
 import horse from "../images/horse.jpg";
 import sleepangel from "../images/sleepangel.jpg";
 import child from "../images/child.jpg";
+import portfolioFoto from "../images/portfolio.jpg";
+import portfolioFoto1 from "../images/portfolio1.jpg";
+import portfolioFoto2 from "../images/portfolio2.jpg";
 
 import rectangle from "../images/rectangle.jpeg";
 import rectangle1 from "../images/rectangle1.jpeg";
@@ -28,6 +31,7 @@ export const formData = {
   inputErrorClass: "form__input_type_error",
   errorClass: "popup__input-error_active",
 };
+
 export const portfolioImages = [
   {
     src: gmir,
@@ -51,7 +55,9 @@ export const portfolioImages = [
   {
     src: child,
   },
-  { src: custle },
+  { src: portfolioFoto },
+  { src: portfolioFoto1 },
+  { src: portfolioFoto2 },
 ];
 export const questionsDataList = [
   {
@@ -86,12 +92,6 @@ export const servicesData = [
     title: "Вертикальные",
     desc: "Вертикальные памятники - классический вариант могильных надгробий",
     image: rectangle,
-    price: "300 BYN",
-  },
-  {
-    title: "Горизонтальные",
-    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
-    image: rectangle1,
     price: "300 BYN",
   },
   {

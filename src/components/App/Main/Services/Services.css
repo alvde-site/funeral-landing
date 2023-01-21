@@ -31,8 +31,8 @@
   padding: 0 15px;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
-  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+  justify-content: center;
   gap: 30px;
 }
 
@@ -62,7 +62,7 @@
   font-size: 25px;
   line-height: 36px;
   color: #fff;
-  margin: 0 0 8px;
+  margin: 0 30px 8px;
 }
 
 .services__desc {
@@ -72,7 +72,7 @@
   font-size: 16px;
   line-height: 23px;
   color: rgba(255, 255, 255, 0.6);
-  padding: 0 5px;
+  padding: 0 30px;
   margin: 0 0 15px;
   text-align: center;
 }
@@ -138,5 +138,9 @@
   .services__card-title {
     font-size: 25px;
     line-height: 36px;
+  }
+
+  .services__desc {
+    padding: 0 5px;
   }
 }
