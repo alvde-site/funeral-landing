@@ -8,7 +8,7 @@ function Topnav(props) {
 
   useEffect(() => {
     window.addEventListener("scroll", getTopPosition);
-  }, [])
+  }, []);
 
   function getTopPosition() {
     const timer = setTimeout(() => {
@@ -21,44 +21,45 @@ function Topnav(props) {
     props.onToggleBurger();
   }
 
-
-
   return (
     <section className="topnav" ref={topnav}>
       <nav className="topnav__content">
         <ul className="contacts topnav__contacts">
-          <li className="contacts__item">
+          <li className="contacts__item contacts__item_work-time">
             <h3 className="contacts__title">Режим работы:</h3>
             <p className="contacts__hours">Круглосуточно</p>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Почта:</h3>
             <a href={`mailto:${email}`} className="contacts__email">
-            {email}
+              {email}
             </a>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href={`tel:${mtsTel}`} className="contacts__tel contacts__tel_mts">
-            {formattedTel(mtsTel)}
+            <a
+              href={`tel:${mtsTel}`}
+              className="contacts__tel contacts__tel_mts"
+            >
+              {formattedTel(mtsTel)}
             </a>
-          </li>
-          <li className="contacts__item">
-            <h3 className="contacts__title">Телефон:</h3>
             <a href={`tel:${a1Tel}`} className="contacts__tel contacts__tel_a1">
-            {formattedTel(a1Tel)}
+              {formattedTel(a1Tel)}
             </a>
           </li>
         </ul>
         <div className="topnav__smallscreen-item">
-          <a href={`mailto:${email}`} className="topnav__email   topnav__email_hidden">
-          {email}
+          <a
+            href={`mailto:${email}`}
+            className="topnav__email   topnav__email_hidden"
+          >
+            {email}
           </a>
           <a href={`tel:${mtsTel}`} className="topnav__tel topnav__tel_mts">
-          {formattedTel(mtsTel)}
+            {formattedTel(mtsTel)}
           </a>
           <a href={`tel:${a1Tel}`} className="topnav__tel topnav__tel_a1">
-          {formattedTel(a1Tel)}
+            {formattedTel(a1Tel)}
           </a>
         </div>
         <div className="topnav__links-wrapper">
@@ -78,32 +79,56 @@ function Topnav(props) {
             }`}
           >
             <li>
-              <a href="/#services" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="/#services"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 Каталог
               </a>
             </li>
             <li>
-              <a href="/#portfolio" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="/#portfolio"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 Портфолио
               </a>
             </li>
             <li>
-              <a href="/#working" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="/#working"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 Этапы работы
               </a>
             </li>
             <li>
-              <a href="/#faq" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="/#faq"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 Вопрос-ответ
               </a>
             </li>
             <li>
-              <a href="#about" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="#about"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 О компании
               </a>
             </li>
             <li>
-              <a href="#footer" className="topnav__link" onClick={handleToggleBurger}>
+              <a
+                href="#footer"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
                 Контакты
               </a>
             </li>

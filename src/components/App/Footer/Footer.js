@@ -1,7 +1,8 @@
-import { mtsTel, a1Tel, email } from "../../../utils/constants";
+import { mtsTel, a1Tel, email, instagram, whatsapp } from "../../../utils/constants";
 import { formattedTel } from "../../../utils/utils";
 
 function Footer() {
+  const date = new Date();
   return (
     <footer className="footer" id={"footer"}>
       <div className="footer__content">
@@ -25,6 +26,12 @@ function Footer() {
           <li className="footer__item">
             <a href={`tel:${a1Tel}`} className="footer__tel footer__tel_a1">
               {formattedTel(a1Tel)}
+            </a>
+          </li>
+          <li className="footer__item">
+            <a href={instagram} className="footer__social footer__social_instagram">
+            </a>
+            <a href={whatsapp} className="footer__social footer__social_whatsapp">
             </a>
           </li>
         </ul>
@@ -65,7 +72,7 @@ function Footer() {
         rel="noreferrer"
         className="footer__copyright"
       >
-        © 2022. Демиденко Александр
+        {`© ${date.getFullYear()}. Демиденко Александр`}
       </a>
     </footer>
   );

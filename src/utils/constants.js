@@ -111,3 +111,5 @@ export const servicesData = [
 export const mtsTel = "+375292415567";
 export const a1Tel = "+375293464968";
 export const email = "sergey.demidenko.1985@mail.ru";
+export const instagram = "https://instagram.com/granitnajapamjat_?igshid=YmMyMTA2M2Y=";
+export const whatsapp = "https://wa.me/375292415567?text=Здравствуйте%2C+у+меня+есть+вопрос";

@@ -79,6 +79,18 @@
   background: url(../../../images/svg/a1-logo.svg) left/contain no-repeat;
 }
 
+.footer__social {
+  padding-left: 32px;
+}
+
+.footer__social_instagram {
+  background: url(../../../images/svg/instagram-logo.svg) left/contain no-repeat;
+}
+
+.footer__social_whatsapp {
+  background: url(../../../images/whatsapp-logo.png) left/contain no-repeat;
+}
+
 .footer__links-title {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -190,6 +202,10 @@
   }
 
   .footer__tel {
+    padding-left: 20px;
+  }
+
+  .footer__social {
     padding-left: 20px;
   }
 }
