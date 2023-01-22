@@ -1,13 +1,14 @@
-import React from "react";
+import PortfolioSwiper from "../Main/Portfolio/PortfolioSwiper/PortfolioSwiper";
 
 function ImagePopup(props) {
   return (
     <div
       className={`popup popup_handle_${props.name} ${
         props.portfolioImage.isOpen && "popup_opened"
-      }`} onClick={props.onOverlayClose}
+      }`}
+      onClick={props.onOverlayClose}
     >
-      <div className="image-viewing">
+      <div className={`image-viewing${!props.portfolioImage.slideSrc && " image-viewing_slider"}`}>
         <button
           className="popup__close popup__close_type_image-viewing"
           type="button"
@@ -16,13 +17,18 @@ function ImagePopup(props) {
         >
           &#10006;
         </button>
-        <figure className="image-viewing__img-card">
-          <img
-            src={props.portfolioImage.src}
-            alt={"фото"}
-            className="image-viewing__image"
-          />
-        </figure>
+        {props.portfolioImage.slideSrc ? (
+          <figure className="image-viewing__img-card">
+            <img
+              src={props.portfolioImage.src}
+              alt={"фото"}
+              className="image-viewing__image"
+            />
+          </figure>
+        ) : (
+          <PortfolioSwiper slideImages={props.portfolioImage.slideSrc} />
+        )}
+        {/*  */}
       </div>
     </div>
   );

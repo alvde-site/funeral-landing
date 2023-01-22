@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.image-viewing_slider {
+  width: 100%;
+  height: 100%;
+}
+
 .image-viewing__img-card {
   position: relative;
   margin: 0;
