@@ -1,6 +1,5 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { portfolioImages } from "../../../../../utils/constants";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +10,7 @@ import { Navigation } from "swiper";
 
 import "./PortfolioSwiper.css";
 
-function PortfolioSwiper() {
+function PortfolioSwiper(props) {
   return (
     <Swiper
       spaceBetween={50}
@@ -21,12 +20,12 @@ function PortfolioSwiper() {
       navigation={true}
       modules={[Navigation]}
     >
-      {portfolioImages.map((portfolioImage, index) => {
+      {props.slideImages.map((slideImage, index) => {
         return (
           <SwiperSlide key={index}>
             <figure className="image-viewing__img-card">
               <img
-                src={portfolioImage.src}
+                src={slideImage}
                 alt={"фото"}
                 className="image-viewing__image"
               />

@@ -55,9 +55,8 @@ export const portfolioImages = [
   {
     src: child,
   },
-  { src: portfolioFoto },
   { src: portfolioFoto1 },
-  { src: portfolioFoto2 },
+  { src: portfolioFoto2, slideSrc: [portfolioFoto2, portfolioFoto] },
 ];
 export const questionsDataList = [
   {

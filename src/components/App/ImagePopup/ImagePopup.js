@@ -8,7 +8,11 @@ function ImagePopup(props) {
       }`}
       onClick={props.onOverlayClose}
     >
-      <div className={`image-viewing${!props.portfolioImage.slideSrc && " image-viewing_slider"}`}>
+      <div
+        className={`image-viewing${
+          props.portfolioImage.slideSrc && " image-viewing_slider"
+        }`}
+      >
         <button
           className="popup__close popup__close_type_image-viewing"
           type="button"
@@ -18,6 +22,8 @@ function ImagePopup(props) {
           &#10006;
         </button>
         {props.portfolioImage.slideSrc ? (
+          <PortfolioSwiper slideImages={props.portfolioImage.slideSrc} />
+        ) : (
           <figure className="image-viewing__img-card">
             <img
               src={props.portfolioImage.src}
@@ -25,8 +31,6 @@ function ImagePopup(props) {
               className="image-viewing__image"
             />
           </figure>
-        ) : (
-          <PortfolioSwiper slideImages={props.portfolioImage.slideSrc} />
         )}
         {/*  */}
       </div>
