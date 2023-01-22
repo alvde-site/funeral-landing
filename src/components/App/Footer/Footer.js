@@ -1,3 +1,6 @@
+import { mtsTel, a1Tel, email } from "../../../utils/constants";
+import { formattedTel } from "../../../utils/utils";
+
 function Footer() {
   return (
     <footer className="footer" id={"footer"}>
@@ -10,16 +13,18 @@ function Footer() {
             <p className="footer__hours">Круглосуточно</p>
           </li>
           <li className="footer__item">
-            <a
-              href="mailto:testform@sitepro.by"
-              className="footer__email"
-            >
-              masel.s@mail.ru
+            <a href={`mailto:${email}`} className="footer__email">
+              {email}
             </a>
           </li>
           <li className="footer__item">
-            <a href="tel:+375000000000" className="footer__tel">
-              +375(29) 241-55-67
+            <a href={`tel:${mtsTel}`} className="footer__tel footer__tel_mts">
+              {formattedTel(mtsTel)}
+            </a>
+          </li>
+          <li className="footer__item">
+            <a href={`tel:${a1Tel}`} className="footer__tel footer__tel_a1">
+              {formattedTel(a1Tel)}
             </a>
           </li>
         </ul>
@@ -54,7 +59,14 @@ function Footer() {
           </ul>
         </nav>
       </div>
-      <a href="https://github.com/alvde-site" target="_blank" rel="noreferrer" className="footer__copyright">© 2022. Демиденко Александр</a>
+      <a
+        href="https://github.com/alvde-site"
+        target="_blank"
+        rel="noreferrer"
+        className="footer__copyright"
+      >
+        © 2022. Демиденко Александр
+      </a>
     </footer>
   );
 }

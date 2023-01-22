@@ -25,12 +25,11 @@
 .footer__logo {
   width: 125px;
   height: 83px;
-  background: url(../../../images/svg/logofff.svg)
-    center/contain no-repeat;
+  background: url(../../../images/svg/logofff.svg) center/contain no-repeat;
 }
 
 .footer__hours {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -40,39 +39,48 @@
 }
 
 .footer__email {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #000;
   text-decoration: none;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: #fff;
 }
 
 .footer__email:hover {
-  color: #AB0C00;
+  color: #ab0c00;
 }
 
 .footer__tel {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   color: #000;
   text-decoration: none;
-  transition: all .15s ease-in-out;
+  padding-left: 32px;
+  transition: all 0.15s ease-in-out;
   color: #fff;
 }
 
 .footer__tel:hover {
-  color: #AB0C00;
+  color: #ab0c00;
+}
+
+.footer__tel_mts {
+  background: url(../../../images/mts-logo.png) left/contain no-repeat;
+}
+
+.footer__tel_a1 {
+  background: url(../../../images/svg/a1-logo.svg) left/contain no-repeat;
 }
 
 .footer__links-title {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -87,18 +95,18 @@
 }
 
 .footer__link {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   text-decoration: none;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: #fff;
 }
 
 .footer__copyright {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -111,7 +119,7 @@
 }
 
 .footer__copyright:hover {
-  color: #AB0C00;
+  color: #ab0c00;
 }
 
 @media (max-width: 1200px) {
@@ -179,5 +187,9 @@
 @media (max-width: 575px) {
   .footer__content {
     max-width: 100%;
+  }
+
+  .footer__tel {
+    padding-left: 20px;
   }
 }
