@@ -8,7 +8,7 @@ function Header() {
         </a>
       </div>
       <ul className="contacts">
-        <li className="contacts__item">
+        <li className="contacts__item contacts__item_work-time">
           <h3 className="contacts__title">Режим работы:</h3>
           <p className="contacts__hours">Круглосуточно</p>
         </li>

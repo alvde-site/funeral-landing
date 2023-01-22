@@ -76,6 +76,10 @@
   flex-direction: column;
 }
 
+.contacts__item_work-time {
+display: block;
+}
+
 .contacts__title {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -150,6 +154,10 @@ background: url(../../../images/mts-logo.png) left/contain no-repeat;
 
   .contacts {
     min-width: 610px;
+  }
+
+  .contacts__item_work-time {
+    display: none;
   }
 }
 
