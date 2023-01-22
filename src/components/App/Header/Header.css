@@ -80,6 +80,10 @@
 display: block;
 }
 
+.contacts__item_email {
+  display: block;
+}
+
 .contacts__title {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -121,7 +125,7 @@ display: block;
   line-height: 28px;
   color: #000;
   margin-top: 5px;
-  padding-left: 40px;
+  padding-left: 20px;
   text-decoration: none;
   transition: all .15s ease-in-out;
 }

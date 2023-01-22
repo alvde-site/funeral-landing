@@ -49,7 +49,7 @@ function Topnav(props) {
           </li>
         </ul>
         <div className="topnav__smallscreen-item">
-          <a href="mailto:sergey.demidenko.1985@mail.ru" className="topnav__email">
+          <a href="mailto:sergey.demidenko.1985@mail.ru" className="topnav__email   topnav__email_hidden">
           sergey.demidenko.1985@mail.ru
           </a>
           <a href="tel:+375292415567" className="topnav__tel topnav__tel_mts">
