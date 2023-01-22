@@ -11,6 +11,8 @@ import portfolioFoto1 from "../images/portfolio1.jpg";
 import portfolioFoto2 from "../images/portfolio2.jpg";
 import portfolioFoto3 from "../images/portfolio3.jpg";
 import portfolioFoto4 from "../images/portfolio4.jpg";
+import portfolioFoto4Slide1 from "../images/portfolio4-1.jpg";
+import portfolioFoto4Slide2 from "../images/portfolio4-2.jpg";
 
 
 import rectangle from "../images/rectangle.jpeg";
@@ -61,7 +63,7 @@ export const portfolioImages = [
   { src: portfolioFoto1 },
   { src: portfolioFoto2, slideSrc: [portfolioFoto2, portfolioFoto] },
   { src: portfolioFoto3 },
-  { src: portfolioFoto4 },
+  { src: portfolioFoto4, slideSrc: [portfolioFoto4, portfolioFoto4Slide1, portfolioFoto4Slide2] },
 ];
 export const questionsDataList = [
   {
