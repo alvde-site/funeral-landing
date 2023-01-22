@@ -107,3 +107,7 @@ export const servicesData = [
     price: "300 BYN",
   },
 ];
+
+export const mtsTel = "+375292415567";
+export const a1Tel = "+375293464968";
+export const email = "sergey.demidenko.1985@mail.ru";

@@ -60,3 +60,7 @@ export const handeDeviceWidth = ()=> {
     window.removeEventListener('scroll', handleTopnavTopPosition)
   }
 }
+
+export const formattedTel = (tel) => {
+  return `+375(29) ${tel.slice(-7,-4) + "-" + tel.slice(-4,-2) + "-" + tel.slice(-2)}`;
+}

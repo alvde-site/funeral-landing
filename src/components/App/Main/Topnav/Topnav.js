@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { handleTopnavTopPosition } from "../../../../utils/utils";
+import { mtsTel, a1Tel, email } from "../../../../utils/constants";
+import { formattedTel } from "../../../../utils/utils";
 
 function Topnav(props) {
   const topnav = useRef();
@@ -31,32 +33,32 @@ function Topnav(props) {
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Почта:</h3>
-            <a href="mailto:sergey.demidenko.1985@mail.ru" className="contacts__email">
-            sergey.demidenko.1985@mail.ru
+            <a href={`mailto:${email}`} className="contacts__email">
+            {email}
             </a>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href="tel:+375292415567" className="contacts__tel contacts__tel_mts">
-            +375(29) 241-55-67
+            <a href={`tel:${mtsTel}`} className="contacts__tel contacts__tel_mts">
+            {formattedTel(mtsTel)}
             </a>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href="tel:+375293464968" className="contacts__tel contacts__tel_a1">
-            +375(29) 346-49-68
+            <a href={`tel:${a1Tel}`} className="contacts__tel contacts__tel_a1">
+            {formattedTel(a1Tel)}
             </a>
           </li>
         </ul>
         <div className="topnav__smallscreen-item">
-          <a href="mailto:sergey.demidenko.1985@mail.ru" className="topnav__email   topnav__email_hidden">
-          sergey.demidenko.1985@mail.ru
+          <a href={`mailto:${email}`} className="topnav__email   topnav__email_hidden">
+          {email}
           </a>
-          <a href="tel:+375292415567" className="topnav__tel topnav__tel_mts">
-          +375(29) 241-55-67
+          <a href={`tel:${mtsTel}`} className="topnav__tel topnav__tel_mts">
+          {formattedTel(mtsTel)}
           </a>
-          <a href="tel:+375293464968" className="topnav__tel topnav__tel_a1">
-          +375(29) 346-49-68
+          <a href={`tel:${a1Tel}`} className="topnav__tel topnav__tel_a1">
+          {formattedTel(a1Tel)}
           </a>
         </div>
         <div className="topnav__links-wrapper">
