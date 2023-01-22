@@ -31,23 +31,32 @@ function Topnav(props) {
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Почта:</h3>
-            <a href="mailto:testform@sitepro.by" className="contacts__email">
-            masel.s@mail.ru
+            <a href="mailto:sergey.demidenko.1985@mail.ru" className="contacts__email">
+            sergey.demidenko.1985@mail.ru
             </a>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href="tel:+375000000000" className="contacts__tel">
+            <a href="tel:+375292415567" className="contacts__tel">
             +375(29) 241-55-67
+            </a>
+          </li>
+          <li className="contacts__item">
+            <h3 className="contacts__title">Телефон:</h3>
+            <a href="tel:+375293464968" className="contacts__tel">
+            +375(29) 346-49-68
             </a>
           </li>
         </ul>
         <div className="topnav__smallscreen-item">
-          <a href="mailto:testform@sitepro.by" className="topnav__email">
-          masel.s@mail.ru
+          <a href="mailto:sergey.demidenko.1985@mail.ru" className="topnav__email">
+          sergey.demidenko.1985@mail.ru
           </a>
-          <a href="tel:+375000000000" className="topnav__tel">
+          <a href="tel:+375292415567" className="topnav__tel">
           +375(29) 241-55-67
+          </a>
+          <a href="tel:+375293464968" className="topnav__tel">
+          +375(29) 346-49-68
           </a>
         </div>
         <div className="topnav__links-wrapper">

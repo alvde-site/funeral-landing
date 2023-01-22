@@ -72,6 +72,8 @@
 
 .contacts__item {
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__title {

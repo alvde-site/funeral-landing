@@ -9,6 +9,9 @@ import child from "../images/child.jpg";
 import portfolioFoto from "../images/portfolio.jpg";
 import portfolioFoto1 from "../images/portfolio1.jpg";
 import portfolioFoto2 from "../images/portfolio2.jpg";
+import portfolioFoto3 from "../images/portfolio3.jpg";
+import portfolioFoto4 from "../images/portfolio4.jpg";
+
 
 import rectangle from "../images/rectangle.jpeg";
 import rectangle1 from "../images/rectangle1.jpeg";
@@ -57,6 +60,8 @@ export const portfolioImages = [
   },
   { src: portfolioFoto1 },
   { src: portfolioFoto2, slideSrc: [portfolioFoto2, portfolioFoto] },
+  { src: portfolioFoto3 },
+  { src: portfolioFoto4 },
 ];
 export const questionsDataList = [
   {
@@ -88,14 +93,14 @@ export const questionsDataList = [
 
 export const servicesData = [
   {
-    title: "Вертикальные",
-    desc: "Вертикальные памятники - классический вариант могильных надгробий",
+    title: "Благоустройство",
+    desc: "Цена без учета лавки и памятника",
     image: rectangle,
-    price: "300 BYN",
+    price: "480 BYN",
   },
   {
     title: "Горизонтальные",
-    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
+    desc: "Цена без учета лавки и памятника",
     image: rectangle1,
     price: "300 BYN",
   },
