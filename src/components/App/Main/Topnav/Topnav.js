@@ -37,13 +37,13 @@ function Topnav(props) {
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href="tel:+375292415567" className="contacts__tel">
+            <a href="tel:+375292415567" className="contacts__tel contacts__tel_mts">
             +375(29) 241-55-67
             </a>
           </li>
           <li className="contacts__item">
             <h3 className="contacts__title">Телефон:</h3>
-            <a href="tel:+375293464968" className="contacts__tel">
+            <a href="tel:+375293464968" className="contacts__tel contacts__tel_a1">
             +375(29) 346-49-68
             </a>
           </li>
@@ -52,10 +52,10 @@ function Topnav(props) {
           <a href="mailto:sergey.demidenko.1985@mail.ru" className="topnav__email">
           sergey.demidenko.1985@mail.ru
           </a>
-          <a href="tel:+375292415567" className="topnav__tel">
+          <a href="tel:+375292415567" className="topnav__tel topnav__tel_mts">
           +375(29) 241-55-67
           </a>
-          <a href="tel:+375293464968" className="topnav__tel">
+          <a href="tel:+375293464968" className="topnav__tel topnav__tel_a1">
           +375(29) 346-49-68
           </a>
         </div>

@@ -116,12 +116,22 @@
   font-size: 20px;
   line-height: 28px;
   color: #000;
+  margin-top: 5px;
+  padding-left: 40px;
   text-decoration: none;
   transition: all .15s ease-in-out;
 }
 
 .contacts__tel:hover {
   color: #AB0C00;
+}
+
+.contacts__tel_mts {
+background: url(../../../images/mts-logo.png) left/contain no-repeat;
+}
+
+.contacts__tel_a1 {
+  background: url(../../../images/svg/a1-logo.svg) left/contain no-repeat;
 }
 
 @media (max-width: 1200px) {
