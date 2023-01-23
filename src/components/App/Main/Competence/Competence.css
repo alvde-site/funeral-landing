@@ -52,7 +52,6 @@
 @media (max-width: 1200px) {
   .competence__content {
     max-width: 930px;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .competence__icon {
@@ -65,7 +64,6 @@
   .competence__content {
     top: -10px;
     max-width: 690px;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .competence__icon {
