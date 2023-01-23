@@ -125,6 +125,15 @@ function Topnav(props) {
             </li>
             <li>
               <a
+                href="#reviews"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
+                Отзывы
+              </a>
+            </li>
+            <li>
+              <a
                 href="#footer"
                 className="topnav__link"
                 onClick={handleToggleBurger}
