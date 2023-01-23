@@ -1,12 +1,15 @@
+import { reviewsList } from "../../../../utils/constants";
+import ReviewCard from "./ReviewCard/ReviewCard";
+
 function Reviews() {
   return (
     <section className="reviews" id={"reviews"}>
       <h2 className="reviews__title">Что говорят наши клиенты</h2>
 
       <ul className="reviews__list">
-        {/* {props.servicesData.map((servicesCard, index) => {
-          return <ServicesCard servicesCard={servicesCard} key={index} />;
-        })} */}
+        {reviewsList.map((review, index) => {
+          return <ReviewCard review={review} key={index} />;
+        })}
       </ul>
     </section>
   );
