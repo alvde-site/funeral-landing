@@ -63,6 +63,11 @@ function Footer() {
                 О компании
               </a>
             </li>
+            <li>
+              <a href="/#reviews" className="footer__link">
+                Отзывы
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
