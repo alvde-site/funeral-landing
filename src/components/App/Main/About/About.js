@@ -12,7 +12,7 @@ function About() {
         ></img>
         <div className="about__description">
           <h3 className="about__list-title">
-            Более 15 лет я помогаю почтить память усопших и беру на себя все
+            Более 10 лет я помогаю почтить память усопших и беру на себя все
             работы по оформлению места захоронения:
           </h3>
           <ul className="about__list">
