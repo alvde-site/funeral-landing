@@ -5,6 +5,7 @@ import Portfolio from "./Portfolio/Portfolio";
 import Working from "./Working/Working";
 import Faq from "./Faq/Faq";
 import About from "./About/About";
+import Reviews from "./Reviews/Reviews";
 import Conditions from "./Conditions/Conditions";
 import Topnav from "./Topnav/Topnav";
 
@@ -27,6 +28,7 @@ function Main(props) {
         questionsDataList={props.questionsDataList}
       />
       <About />
+      <Reviews />
       <Conditions />
     </main>
   );
