@@ -83,6 +83,10 @@
   padding-left: 32px;
 }
 
+.footer__social:hover {
+  opacity: 0.5;
+}
+
 .footer__social_instagram {
   background: url(../../../images/svg/instagram-logo.svg) left/contain no-repeat;
 }
@@ -115,6 +119,10 @@
   text-decoration: none;
   transition: all 0.15s ease-in-out;
   color: #fff;
+}
+
+.footer__link:hover {
+  color: #ab0c00;
 }
 
 .footer__copyright {
@@ -202,10 +210,6 @@
   }
 
   .footer__tel {
-    padding-left: 20px;
-  }
-
-  .footer__social {
     padding-left: 20px;
   }
 }
