@@ -4,11 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import "./PortfolioSwiper.css";
+import "./Swiper.css";
 
 import { Navigation } from "swiper";
-
-import "./PortfolioSwiper.css";
 
 function PortfolioSwiper(props) {
   return (

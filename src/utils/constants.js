@@ -102,7 +102,7 @@ export const servicesData = [
     price: "480 BYN",
   },
   {
-    title: "Горизонтальные",
+    title: "Благоустройство",
     desc: "Цена без учета лавки и памятника",
     image: rectangle1,
     price: "300 BYN",

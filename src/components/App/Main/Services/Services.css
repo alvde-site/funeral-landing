@@ -20,14 +20,14 @@
   font-size: 18px;
   line-height: 26px;
   color: #888;
-  margin: 0 0 68px;
+  margin: 0;
   text-align: center;
 }
 
 .services__catalog {
   box-sizing: border-box;
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 68px auto 0;
   padding: 0 15px;
   list-style: none;
   display: grid;
@@ -42,6 +42,11 @@
   align-items: center;
   background-color: #000;
   padding-bottom: 25px;
+}
+
+.services__card_catalog:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .services__image {
@@ -63,6 +68,7 @@
   line-height: 36px;
   color: #fff;
   margin: 0 30px 8px;
+  text-align: center;
 }
 
 .services__desc {

@@ -1,4 +1,4 @@
-import PortfolioSwiper from "../Main/Portfolio/PortfolioSwiper/PortfolioSwiper";
+import Swiper from "../Swiper/Swiper";
 
 function ImagePopup(props) {
   return (
@@ -22,7 +22,7 @@ function ImagePopup(props) {
           &#10006;
         </button>
         {props.portfolioImage.slideSrc ? (
-          <PortfolioSwiper slideImages={props.portfolioImage.slideSrc} />
+          <Swiper slideImages={props.portfolioImage.slideSrc} />
         ) : (
           <figure className="image-viewing__img-card">
             <img

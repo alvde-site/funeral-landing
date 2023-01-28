@@ -8,6 +8,7 @@ import About from "./About/About";
 import Reviews from "./Reviews/Reviews";
 import Conditions from "./Conditions/Conditions";
 import Topnav from "./Topnav/Topnav";
+import Catalog from "./Catalog/Catalog";
 
 function Main(props) {
   return (
@@ -19,6 +20,7 @@ function Main(props) {
       <Advertisement />
       <Competence />
       <Services servicesData={props.servicesData}/>
+      <Catalog/>
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}
