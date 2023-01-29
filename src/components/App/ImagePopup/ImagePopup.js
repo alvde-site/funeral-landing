@@ -32,7 +32,6 @@ function ImagePopup(props) {
             />
           </figure>
         )}
-        {/*  */}
       </div>
     </div>
   );

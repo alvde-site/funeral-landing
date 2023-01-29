@@ -1,7 +1,6 @@
 function CatalogCard(props) {
-  console.log(props)
   function handleOpenSlide() {
-    props.onSlide(props.catalogCard);
+    props.onImageClick(props.catalogCard);
   }
   return (
     <li className="services__card services__card_catalog" onClick={handleOpenSlide}>

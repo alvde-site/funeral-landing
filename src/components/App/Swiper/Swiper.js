@@ -8,7 +8,7 @@ import "./Swiper.css";
 
 import { Navigation } from "swiper";
 
-function PortfolioSwiper(props) {
+function imagesViewing(props) {
   return (
     <Swiper
       spaceBetween={50}
@@ -35,4 +35,4 @@ function PortfolioSwiper(props) {
   );
 }
 
-export default PortfolioSwiper;
+export default imagesViewing;
