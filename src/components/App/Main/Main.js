@@ -20,7 +20,7 @@ function Main(props) {
       <Advertisement />
       <Competence />
       <Services servicesData={props.servicesData}/>
-      <Catalog/>
+      <Catalog onSlide={props.onImageClick}/>
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}

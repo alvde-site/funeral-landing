@@ -171,6 +171,7 @@ function App() {
   }
 
   function handleImageClick(imageSrc) {
+    console.log(imageSrc)
     imageSrc.isOpen = true;
     setSelectedImage(imageSrc);
   }
