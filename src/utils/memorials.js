@@ -23,16 +23,8 @@ import tombstoneImg3 from "../images/memorials/catalog_memorials_page-0019.jpg";
 
 export const catalogData = [
   {
-    title: "Горизонтальные формы",
-    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
-    src: rectangle,
-    slideSrc: [horizontalImg1, horizontalImg2, horizontalImg3],
-    price: "480 BYN",
-  },
-  {
     title: "Вертикальные формы",
     desc: "Вертикальные памятники - классический вариант могильных надгробий",
-    src: rectangle1,
     slideSrc: [
       verticalImg1,
       verticalImg2,
@@ -46,6 +38,14 @@ export const catalogData = [
       verticalImg10,
       verticalImg11,
     ],
+    src: rectangle,
+    price: "300 BYN",
+  },
+  {
+    title: "Горизонтальные формы",
+    desc: "Чаще всего устанавливается для двух, трех и более надгробий",
+    src: rectangle1,
+    slideSrc: [horizontalImg1, horizontalImg2, horizontalImg3],
     price: "300 BYN",
   },
   {
