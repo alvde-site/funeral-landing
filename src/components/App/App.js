@@ -131,7 +131,7 @@ function App() {
   }
 
   function handleOverlayClick(e) {
-    (e.currentTarget === e.target) && closeAllPopups();
+    (e.currentTarget === e.target || e.target.classList.contains('swiper-slide')) && closeAllPopups();
   }
 
   function handleCreateClient({ email, phone }) {

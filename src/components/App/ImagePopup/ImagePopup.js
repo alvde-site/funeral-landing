@@ -1,12 +1,16 @@
 import Swiper from "../Swiper/Swiper";
 
 function ImagePopup(props) {
+  function handleOverlayClose(e) {
+    console.log(e.currentTarget, e.target)
+    props.onOverlayClose(e)
+  }
   return (
     <div
       className={`popup popup_handle_${props.name} ${
         props.portfolioImage.isOpen && "popup_opened"
       }`}
-      onClick={props.onOverlayClose}
+      onClick={handleOverlayClose}
     >
       <div
         className={`image-viewing${
