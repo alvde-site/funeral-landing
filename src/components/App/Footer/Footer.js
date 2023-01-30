@@ -1,4 +1,10 @@
-import { mtsTel, a1Tel, email, instagram, whatsapp } from "../../../utils/constants";
+import {
+  mtsTel,
+  a1Tel,
+  email,
+  instagram,
+  whatsapp,
+} from "../../../utils/constants";
 import { formattedTel } from "../../../utils/utils";
 
 function Footer() {
@@ -29,9 +35,17 @@ function Footer() {
             </a>
           </li>
           <li className="footer__item">
-            <a href={instagram} className="footer__social footer__social_instagram">
+            <a
+              href={instagram}
+              className="footer__social footer__social_instagram"
+            >
+              {" "}
             </a>
-            <a href={whatsapp} className="footer__social footer__social_whatsapp">
+            <a
+              href={whatsapp}
+              className="footer__social footer__social_whatsapp"
+            >
+              {" "}
             </a>
           </li>
         </ul>
@@ -41,6 +55,11 @@ function Footer() {
             <li>
               <a href="/#services" className="footer__link">
                 Каталог
+              </a>
+            </li>
+            <li>
+              <a href="/#grave" className="footer__link">
+                Благоустройства
               </a>
             </li>
             <li>
@@ -64,7 +83,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/#reviews" className="footer__link">
+              <a href="#reviews" className="footer__link">
                 Отзывы
               </a>
             </li>

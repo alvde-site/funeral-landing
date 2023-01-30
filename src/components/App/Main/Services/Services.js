@@ -2,7 +2,7 @@ import ServicesCard from "./ServicesCard/ServicesCard";
 
 function Services(props) {
   return (
-    <section className="services" id={"services"}>
+    <section className="services" id={"grave"}>
       <h2 className="services__title">Примеры благоустройств</h2>
       <p className="services__subtitle">Помогу вам с любой задачей</p>
 

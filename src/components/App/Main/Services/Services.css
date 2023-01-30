@@ -46,7 +46,7 @@
 
 .services__card_catalog:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .services__image {
@@ -69,6 +69,10 @@
   color: #fff;
   margin: 0 30px 8px;
   text-align: center;
+}
+
+.services__card-title_link {
+  border-bottom: 1px solid #fff;
 }
 
 .services__desc {

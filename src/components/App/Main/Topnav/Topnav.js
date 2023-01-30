@@ -89,6 +89,15 @@ function Topnav(props) {
             </li>
             <li>
               <a
+                href="/#grave"
+                className="topnav__link"
+                onClick={handleToggleBurger}
+              >
+                Благоустройства
+              </a>
+            </li>
+            <li>
+              <a
                 href="/#portfolio"
                 className="topnav__link"
                 onClick={handleToggleBurger}
