@@ -1,4 +1,10 @@
+// import infoImg from '../../../../images/info.png';
+
 function Calculator() {
+  function handleSumbit(e) {
+    e.preventDefault();
+  }
+
   function stepdown(e) {
     console.log(e.target);
   }
@@ -6,60 +12,48 @@ function Calculator() {
   function stepup(e) {
     console.log(e.target);
   }
+
   return (
     <section className="calculator">
-       <h3 className="calculator__title">Калькулятор благоустройства</h3>
+      <h3 className="calculator__title">Калькулятор благоустройства</h3>
       <div className="calculator__content">
-        <div className="calculator__desc">
-          <span className="close">&times;</span>
-          <div className="info-box__wrap">
-            <img src="images/dest/info.png" alt="Информация"></img>
-          </div>
-        </div>
-        <form className="calc" action="/action_page.php">
-          <p>Сколько могилок на захоронении?</p>
-          <div className="calc__size__field margin-bottom">
-            <button className="number-minus" type="button" onClick={stepdown}>
-              -
-            </button>
-            <input
-              id="numberPlaces"
-              type="number"
-              min="0"
-              max="8"
-              value="1"
-              readOnly
-            ></input>
-            <button className="number-plus" type="button" onClick={stepup}>
-              +
-            </button>
-          </div>
-          <span className="info-active">&#10068</span>
-          <div className="calc__size margin-bottom">
-            <p>Введите ширину захоронения, см</p>
-            <div className="calc__size__field margin-bottom">
-              <button className="number-minus" type="button" onClick={stepdown}>
+        <form
+          className="calculator__form"
+          action="#"
+          name="calcform"
+          onSubmit={handleSumbit}
+        >
+          <fieldset className="calculator__fieldset">
+            <label htmlFor="gravecount" className="calculator__label">
+              Введите ширину захоронения, см
+            </label>
+            <div className="calculator__field">
+              <button className="calculator__count-button calculator__count-button_minus" type="button" onClick={stepdown}>
                 -
               </button>
               <input
-                id="width"
+                className="calculator__input calculator__input_number"
+                id="gravecount"
                 type="number"
                 min="120"
                 value="120"
                 step="30"
                 readOnly
               ></input>
-              <button className="number-plus" type="button" onClick={stepup}>
+              <button className="calculator__count-button calculator__count-button_plus" type="button" onClick={stepup}>
                 +
               </button>
             </div>
-            <span className="info-active">&#10068</span>
+            <span className="info-active">?</span>
+          </fieldset>
+          <div className="calc__size margin-bottom">
             <p>Введите длину захоронения, см</p>
-            <div className="calc__size__field margin-bottom">
-              <button className="number-minus" type="button" onClick={stepdown}>
+            <div className="calculator__field">
+              <button className="calculator__count-button calculator__count-button_minus" type="button" onClick={stepdown}>
                 -
               </button>
               <input
+                className="calculator__input"
                 id="height"
                 type="number"
                 min="120"
@@ -67,7 +61,7 @@ function Calculator() {
                 step="30"
                 readOnly
               ></input>
-              <button className="number-plus" type="button" onClick={stepup}>
+              <button className="calculator__count-button calculator__count-button_plus" type="button" onClick={stepup}>
                 +
               </button>
             </div>
