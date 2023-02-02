@@ -136,19 +136,26 @@ function Calculator() {
               <span className="calculator__info">?</span>
             </div>
           </fieldset>
-
-          <div className="calc__size margin-bottom">
-            <div className="margin-bottom">
-              {/* <input type="checkbox" id="needcurb"><span className="needcurb">Нужно установить бордюры</span></input> */}
-            </div>
+          <fieldset className="calculator__fieldset">
+            <input type="checkbox" id="needcurb"></input>
+            <span className="needcurb">Нужно установить бордюры</span>
+          </fieldset>
+          <div className="calculator__buttons">
+            <input
+              type="button"
+              id="resultButton"
+              value="Рассчитать"
+              className="calculator__submit-button"
+              href="#result"
+            ></input>
+            <input
+              type="reset"
+              id="resetButton"
+              value="Сбросить"
+              className="calculator__submit-button"
+            ></input>
           </div>
-          <div className="calc__button">
-            <button type="button" id="resultButton">
-              <a href="#result">Рассчитать</a>
-            </button>
-            <input type="reset" id="resetButton" value="Сбросить"></input>
-          </div>
-          <p className="conditions">
+          <p>
             Расчет является предварительным. Точные условия можно узнать по
             телефону.
           </p>
