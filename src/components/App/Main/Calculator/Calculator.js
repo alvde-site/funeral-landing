@@ -24,55 +24,116 @@ function Calculator() {
           onSubmit={handleSumbit}
         >
           <fieldset className="calculator__fieldset">
-            <label htmlFor="gravecount" className="calculator__label">
-              Введите ширину захоронения, см
+            <label htmlFor="gravescount" className="calculator__label">
+              Сколько могилок на захоронении?
             </label>
             <div className="calculator__field">
-              <button className="calculator__count-button calculator__count-button_minus" type="button" onClick={stepdown}>
+              <button
+                className="calculator__count-button calculator__count-button_minus"
+                type="button"
+                onClick={stepdown}
+              >
                 -
               </button>
               <input
                 className="calculator__input calculator__input_number"
-                id="gravecount"
+                id="gravescount"
                 type="number"
                 min="120"
                 value="120"
                 step="30"
                 readOnly
               ></input>
-              <button className="calculator__count-button calculator__count-button_plus" type="button" onClick={stepup}>
+              <button
+                className="calculator__count-button calculator__count-button_plus"
+                type="button"
+                onClick={stepup}
+              >
                 +
               </button>
             </div>
             <span className="info-active">?</span>
           </fieldset>
-          <div className="calc__size margin-bottom">
-            <p>Введите длину захоронения, см</p>
+          <fieldset className="calculator__fieldset">
+            <label htmlFor="widthcount" className="calculator__label">
+              Введите ширину захоронения, см
+            </label>
             <div className="calculator__field">
-              <button className="calculator__count-button calculator__count-button_minus" type="button" onClick={stepdown}>
+              <button
+                className="calculator__count-button calculator__count-button_minus"
+                type="button"
+                onClick={stepdown}
+              >
                 -
               </button>
               <input
-                className="calculator__input"
-                id="height"
+                className="calculator__input calculator__input_number"
+                id="widthcount"
                 type="number"
                 min="120"
                 value="120"
                 step="30"
                 readOnly
               ></input>
-              <button className="calculator__count-button calculator__count-button_plus" type="button" onClick={stepup}>
+              <button
+                className="calculator__count-button calculator__count-button_plus"
+                type="button"
+                onClick={stepup}
+              >
                 +
               </button>
             </div>
-            <span className="info-active">&#10068</span>
-            <div className="calc__checkbox margin-bottom">
-              <p>Выбрать размер плитки, см</p>
-              <select name="tile" id="material" className="width-field">
+            <span className="info-active">?</span>
+          </fieldset>
+          <fieldset className="calculator__fieldset">
+            <label htmlFor="heightcount" className="calculator__label">
+              Введите длину захоронения, см
+            </label>
+            <div className="calculator__field">
+              <button
+                className="calculator__count-button calculator__count-button_minus"
+                type="button"
+                onClick={stepdown}
+              >
+                -
+              </button>
+              <input
+                className="calculator__input calculator__input_number"
+                id="heightcount"
+                type="number"
+                min="120"
+                value="120"
+                step="30"
+                readOnly
+              ></input>
+              <button
+                className="calculator__count-button calculator__count-button_plus"
+                type="button"
+                onClick={stepup}
+              >
+                +
+              </button>
+            </div>
+            <span className="info-active">?</span>
+          </fieldset>
+
+          <fieldset className="calculator__fieldset">
+            <label htmlFor="material" className="calculator__label">
+              Выбрать размер плитки, см
+            </label>
+            <div className="calculator__field">
+              <select name="tile" id="material" className="calculator__input">
                 <option value="900">Плитка 30*30</option>
                 <option value="3600">Керамогранит 60*60</option>
               </select>
             </div>
+            <span className="info-active">?</span>
+          </fieldset>
+
+
+
+
+          <div className="calc__size margin-bottom">
             <div className="margin-bottom">
               {/* <input type="checkbox" id="needcurb"><span className="needcurb">Нужно установить бордюры</span></input> */}
             </div>
