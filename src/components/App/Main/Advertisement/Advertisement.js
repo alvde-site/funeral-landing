@@ -6,7 +6,7 @@ function Advertisement() {
         <h1 className="advertisement__title">
           Изготовление и установка памятников в Могилеве
         </h1>
-        <p className="advertisement__subtitle">За 7 дней от 250 BYN</p>
+        <p className="advertisement__subtitle">За 7 дней от 950 BYN</p>
         <div className="advertisement__info">
           <h2 className="advertisemet__info-title">
             Изделия из камня любой сложности

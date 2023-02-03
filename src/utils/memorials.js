@@ -1,5 +1,6 @@
-import rectangle from "../images/rectangle-69.png";
-import rectangle1 from "../images/rectangle-69-1.png";
+import verticalGrave from "../images/vertical-grave.jpg";
+import horizontalGrave from "../images/horizontal-grave.jpg";
+import tombstone from "../images/tombstone.png";
 
 import verticalImg1 from "../images/memorials/catalog_memorials_page-0003.jpg";
 import verticalImg2 from "../images/memorials/catalog_memorials_page-0004.jpg";
@@ -38,20 +39,20 @@ export const catalogData = [
       verticalImg10,
       verticalImg11,
     ],
-    src: rectangle,
-    price: "300 BYN",
+    src: verticalGrave,
+    price: "950 BYN",
   },
   {
     title: "Горизонтальные формы",
     desc: "Чаще всего устанавливается для двух, трех и более надгробий",
-    src: rectangle1,
+    src: horizontalGrave,
     slideSrc: [horizontalImg1, horizontalImg2, horizontalImg3],
-    price: "300 BYN",
+    price: "1500 BYN",
   },
   {
     title: "Надгробные плиты",
     desc: "Чаще всего устанавливается для двух, трех и более надгробий",
-    src: rectangle1,
+    src: tombstone,
     slideSrc: [tombstoneImg1, tombstoneImg2, tombstoneImg3],
     price: "300 BYN",
   },

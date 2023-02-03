@@ -1,6 +1,8 @@
 .advertisement {
   padding: 158px 0;
-  background: url(../../../../images/angel-skorbi.jpg) center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(4,2,30,1) 0%, rgba(46,46,49,1) 17%, rgba(0,212,255,0) 100%),
+    url(../../../../images/angel-skorbi.jpg) center/cover no-repeat;
+  /* background-image: ;; */
 }
 
 .advertisement__content {
@@ -11,7 +13,7 @@
 }
 
 .advertisement__title {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 42px;
@@ -22,7 +24,7 @@
 }
 
 .advertisement__subtitle {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -38,13 +40,13 @@
 
 .advertisement__feedback {
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.25;
   color: #fff;
-  background-color: #AB0C00;
+  background-color: #ab0c00;
   min-width: 235px;
   margin: 0 30px 0 0;
   padding: 8px 0;
@@ -52,16 +54,16 @@
   text-decoration: none;
   white-space: nowrap;
   border: 1px solid transparent;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .advertisement__feedback:hover {
-  background-color: #EC1000;
+  background-color: #ec1000;
   color: #fff;
 }
 
 .advertisemet__info-title {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -71,12 +73,13 @@
   opacity: 0.7;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .advertisement__content {
-      max-width: 930px;
+    max-width: 930px;
   }
 
-  .advertisement__title, .advertisement__subtitle {
+  .advertisement__title,
+  .advertisement__subtitle {
     max-width: 450px;
   }
 
@@ -93,7 +96,8 @@
     max-width: 720px;
   }
 
-  .advertisement__title, .advertisement__subtitle {
+  .advertisement__title,
+  .advertisement__subtitle {
     max-width: 330px;
   }
 
@@ -112,7 +116,8 @@
     max-width: 510px;
   }
 
-  .advertisement__title, .advertisement__subtitle {
+  .advertisement__title,
+  .advertisement__subtitle {
     max-width: 100%;
   }
 

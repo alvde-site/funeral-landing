@@ -20,11 +20,11 @@ function Main(props) {
       <Advertisement />
       <Competence />
       <Catalog onImageClick={props.onImageClick}/>
-      <Services servicesData={props.servicesData}/>
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}
       />
+      <Services servicesData={props.servicesData}/>
       <Working />
       <Faq
         questionsDataList={props.questionsDataList}
@@ -32,6 +32,7 @@ function Main(props) {
       <About />
       <Reviews />
       <Conditions />
+
     </main>
   );
 }
