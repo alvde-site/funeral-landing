@@ -58,13 +58,13 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/#grave" className="footer__link">
-                Благоустройства
+              <a href="/#portfolio" className="footer__link">
+                Портфолио
               </a>
             </li>
             <li>
-              <a href="/#portfolio" className="footer__link">
-                Портфолио
+              <a href="/#grave" className="footer__link">
+                Благоустройства
               </a>
             </li>
             <li>

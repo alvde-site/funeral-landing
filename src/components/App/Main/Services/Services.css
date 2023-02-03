@@ -133,9 +133,12 @@
 }
 
 @media (max-width: 768px) {
+  .services {
+    padding: 70px 0 50px;
+  }
+
   .services__catalog {
     max-width: 510px;
-    /* grid-template-columns: repeat(1, 1fr); */
   }
 
   .services__card-title {
