@@ -109,6 +109,7 @@
 @media (max-width: 768px) {
   .advertisement {
     padding: 50px 0 100px;
+    background: #000;
   }
 
   .advertisement__content {
