@@ -1,6 +1,6 @@
-import verticalGrave from "../images/vertical-grave.jpg";
-import horizontalGrave from "../images/horizontal-grave.jpg";
-import tombstone from "../images/tombstone.png";
+import verticalGrave from "../images/vertical-grave600.png";
+import horizontalGrave from "../images/horizontal-grave600.png";
+import tombstone from "../images/tombstone600.png";
 
 import verticalImg1 from "../images/memorials/catalog_memorials_page-0003.jpg";
 import verticalImg2 from "../images/memorials/catalog_memorials_page-0004.jpg";

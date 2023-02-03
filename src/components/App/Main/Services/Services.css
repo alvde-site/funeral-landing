@@ -40,17 +40,19 @@
 .services__card {
   display: flex;
   flex-direction: column;
+  min-height: 445px;
   align-items: center;
-  background-color: #000;
-  padding-bottom: 25px;
+  background-color: #fff;
+  border-radius: 5%;
+  padding: 8px 8px 25px;
+  box-shadow: 5px 5px 20px 0px rgb(174 174 192 / 50%);
 }
 
 .services__image {
   display: block;
   width: 100%;
   max-width: 350px;
-  height: 100%;
-  max-height: 233px;
+  height: 233px;
   object-fit: cover;
   object-position: 50% 50%;
   margin: 0 auto 17px;
@@ -62,7 +64,7 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 36px;
-  color: #fff;
+  color: #534949;
   margin: 0 30px 8px;
   text-align: center;
 }
@@ -73,7 +75,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #534949;
   padding: 0 30px;
   margin: 0 0 15px;
   text-align: center;
@@ -97,7 +99,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.25;
-  color: #fff;
+  color: #534949;
   background-color: transparent;
   min-width: 180px;
   margin: auto 0 0;
@@ -105,13 +107,12 @@
   border-radius: 100px;
   text-decoration: none;
   white-space: nowrap;
-  border: 1px solid #fff;
+  border: 1px solid #534949;
   transition: all .15s ease-in-out;
 }
 
 .services__feedback:hover {
-  background-color: #EC1000;
-  border: 1px solid #EC1000;
+  opacity: 0.5;
 }
 
 @media (max-width: 1200px) {

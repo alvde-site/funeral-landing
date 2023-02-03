@@ -1,7 +1,7 @@
 .advertisement {
   padding: 158px 0;
-  background: linear-gradient(90deg, rgba(4,2,30,1) 0%, rgba(46,46,49,1) 17%, rgba(0,212,255,0) 100%),
-    url(../../../../images/angel-skorbi.jpg) center/cover no-repeat;
+  background:
+    url(../../../../images/angel-heavenly.jpg) center/cover no-repeat;
   /* background-image: ;; */
 }
 
@@ -109,7 +109,6 @@
 @media (max-width: 768px) {
   .advertisement {
     padding: 50px 0 100px;
-    background: #000;
   }
 
   .advertisement__content {

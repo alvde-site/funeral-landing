@@ -4,6 +4,7 @@
   border-radius: 30px;
   margin: 0 0 15px;
   padding: 13px 38px 13px 35px;
+  box-shadow: 5px 5px 20px 0px rgb(174 174 192 / 50%);
 }
 
 .faq__question {
