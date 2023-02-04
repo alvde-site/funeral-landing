@@ -1,16 +1,34 @@
 // import infoImg from '../../../../images/info.png';
 
+import { useState } from "react";
+
 function Calculator() {
+  const defaultCount = {
+    gravescount: 1,
+  };
+  const [count, setCount] = useState(defaultCount);
+  // const []
   function handleSumbit(e) {
     e.preventDefault();
   }
 
-  function stepdown(e) {
-    console.log(e.target);
+  function decreaseGravesCount(e) {
+    console.log(e.target.value);
   }
 
-  function stepup(e) {
-    console.log(e.target);
+  function increaseGravesCount(e) {
+    const target = e.target;
+    const increaseInput = target.previousSibling;
+    const inputName = increaseInput.name;
+    const inputValue = increaseInput.value;
+    switch (inputName) {
+      case "gravescount":
+        const value = Number(inputValue) + 1;
+        setCount({ [inputName]: value });
+        break;
+      default:
+        console.log(value);
+    }
   }
 
   return (
@@ -32,7 +50,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={stepdown}
+                  onClick={decreaseGravesCount}
                 >
                   -
                 </button>
@@ -41,14 +59,14 @@ function Calculator() {
                   id="gravescount"
                   type="number"
                   min="120"
-                  value="120"
-                  step="30"
+                  value={count.gravescount}
                   readOnly
+                  name="gravescount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={stepup}
+                  onClick={increaseGravesCount}
                 >
                   +
                 </button>
@@ -65,7 +83,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={stepdown}
+                  onClick={increaseGravesCount}
                 >
                   -
                 </button>
@@ -75,13 +93,13 @@ function Calculator() {
                   type="number"
                   min="120"
                   value="120"
-                  step="30"
                   readOnly
+                  name="widthcount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={stepup}
+                  onClick={increaseGravesCount}
                 >
                   +
                 </button>
@@ -98,7 +116,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={stepdown}
+                  onClick={decreaseGravesCount}
                 >
                   -
                 </button>
@@ -108,13 +126,13 @@ function Calculator() {
                   type="number"
                   min="120"
                   value="120"
-                  step="30"
                   readOnly
+                  name="heightcount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={stepup}
+                  onClick={increaseGravesCount}
                 >
                   +
                 </button>
