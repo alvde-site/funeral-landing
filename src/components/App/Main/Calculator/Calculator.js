@@ -12,22 +12,33 @@ function Calculator() {
     e.preventDefault();
   }
 
-  function decreaseGravesCount(e) {
-    console.log(e.target.value);
-  }
-
-  function increaseGravesCount(e) {
-    const target = e.target;
-    const increaseInput = target.previousSibling;
-    const inputName = increaseInput.name;
-    const inputValue = increaseInput.value;
-    switch (inputName) {
+  function setInputValue(input, val) {
+    switch (input) {
       case "gravescount":
-        const value = Number(inputValue) + 1;
-        setCount({ [inputName]: value });
+        // const value = Number(val) + 1;
+        setCount({ [input]: val });
         break;
       default:
-        console.log(value);
+        console.log("asdf");
+    }
+  }
+
+  function increaseGravesCount(input) {
+    const inputName = input.name;
+    const inputValue = Number(input.value) + 1;
+    setInputValue(inputName, inputValue);
+  }
+
+  function decreaseGravesCount(input) {
+    const inputName = input.name;
+    const inputValue = Number(input.value) - 1;
+    setInputValue(inputName, inputValue);
+  }
+
+  function changeInputCount(e) {
+    const target = e.target;
+    if(target) {
+      target.previousSibling ? increaseGravesCount(target.previousSibling) : decreaseGravesCount(target.nextSibling);
     }
   }
 
@@ -50,7 +61,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={decreaseGravesCount}
+                  onClick={changeInputCount}
                 >
                   -
                 </button>
@@ -66,7 +77,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={increaseGravesCount}
+                  onClick={changeInputCount}
                 >
                   +
                 </button>
