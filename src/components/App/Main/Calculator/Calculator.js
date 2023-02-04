@@ -4,7 +4,8 @@ function Calculator() {
   const defaultCount = {
     gravescount: 1,
     widthcount: 120,
-    heightcount: 120,
+    lengthcount: 120,
+    tilesize: 900,
   };
   const [count, setCount] = useState(defaultCount);
   function handleSumbit(e) {
@@ -12,9 +13,14 @@ function Calculator() {
   }
 
   function hundleChangeCount(inputElement, newValue) {
-    setCount((prevState) => {
-      return { ...prevState, [inputElement]: newValue };
-    });
+    newValue > 0 &&
+      setCount((prevState) => {
+        return { ...prevState, [inputElement]: newValue };
+      });
+  }
+
+  function selectLengthCountNumber() {
+    return Number(count.tilesize) === 900 ? 30 : 60;
   }
 
   function hundleDecreaseButton(e) {
@@ -34,12 +40,13 @@ function Calculator() {
           hundleChangeCount("gravescount", gravesCount);
         }
         break;
-      case "heightcount":
-        val = Number(value) - 120;
-        hundleChangeCount(input, val);
+      case "lengthcount":
+        let countNumber = selectLengthCountNumber();
+        val = Number(value) - countNumber;
+        val >= 120 && hundleChangeCount(input, val);
         break;
       default:
-        console.log("asdf");
+        console.log("Ошибка");
     }
   }
 
@@ -60,12 +67,26 @@ function Calculator() {
         val = Number(value) + 120;
         hundleChangeCount(input, val);
         break;
-      case "heightcount":
-        val = Number(value) + 120;
+      case "lengthcount":
+        let countNumber = selectLengthCountNumber();
+        val = Number(value) + countNumber;
         hundleChangeCount(input, val);
         break;
       default:
-        console.log("asdf");
+        console.log("Ошибка");
+    }
+  }
+
+  function hundleSelectChange(e) {
+    const target = e.target;
+    const name = target.name;
+    const value = target.value;
+    hundleChangeCount(name, value);
+    if (Number(value) === 3600) {
+      if (count.lengthcount % 60) {
+        const newValue = Number(count.lengthcount) + 30;
+        hundleChangeCount("lengthcount", newValue);
+      }
     }
   }
 
@@ -96,7 +117,6 @@ function Calculator() {
                   className="calculator__input calculator__input_number"
                   id="gravescount"
                   type="number"
-                  min="1"
                   value={count.gravescount || ""}
                   readOnly
                   name="gravescount"
@@ -129,7 +149,6 @@ function Calculator() {
                   className="calculator__input calculator__input_number"
                   id="widthcount"
                   type="number"
-                  min="120"
                   value={count.widthcount || ""}
                   readOnly
                   name="widthcount"
@@ -146,7 +165,7 @@ function Calculator() {
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
-            <label htmlFor="heightcount" className="calculator__label">
+            <label htmlFor="lengthcount" className="calculator__label">
               Введите длину захоронения, см
             </label>
             <div className="calculator__field">
@@ -160,12 +179,11 @@ function Calculator() {
                 </button>
                 <input
                   className="calculator__input calculator__input_number"
-                  id="heightcount"
+                  id="lengthcount"
                   type="number"
-                  min="120"
-                  value={count.heightcount || ""}
+                  value={count.lengthcount || ""}
                   readOnly
-                  name="heightcount"
+                  name="lengthcount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
@@ -179,12 +197,18 @@ function Calculator() {
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
-            <label htmlFor="material" className="calculator__label">
+            <label htmlFor="tilesize" className="calculator__label">
               Выбрать размер плитки, см
             </label>
             <div className="calculator__field">
               <div className="calculator__input-field">
-                <select name="tile" id="material" className="calculator__input">
+                <select
+                  name="tilesize"
+                  id="tilesize"
+                  className="calculator__input"
+                  value={count.tilesize}
+                  onChange={hundleSelectChange}
+                >
                   <option value="900">Плитка 30*30</option>
                   <option value="3600">Керамогранит 60*60</option>
                 </select>
