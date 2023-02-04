@@ -29,6 +29,10 @@ function Calculator() {
       case "widthcount":
         val = Number(value) - 120;
         hundleChangeCount(input, val);
+        const gravesCount = val < count.gravescount * 120 ? val / 120 : null;
+        if (gravesCount) {
+          hundleChangeCount("gravescount", gravesCount);
+        }
         break;
       case "heightcount":
         val = Number(value) - 120;
@@ -47,6 +51,10 @@ function Calculator() {
       case "gravescount":
         val = Number(value) + 1;
         hundleChangeCount(input, val);
+        const widthCount = count.widthcount < val * 120 ? val * 120 : null;
+        if (widthCount) {
+          hundleChangeCount("widthcount", widthCount);
+        }
         break;
       case "widthcount":
         val = Number(value) + 120;
