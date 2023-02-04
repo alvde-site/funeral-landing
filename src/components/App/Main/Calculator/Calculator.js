@@ -11,6 +11,12 @@ function Calculator() {
     e.preventDefault();
   }
 
+  function hundleChangeCount(inputElement, newValue) {
+    setCount((prevState) => {
+      return { ...prevState, [inputElement]: newValue };
+    });
+  }
+
   function hundleDecreaseButton(e) {
     const input = e.target.nextSibling.name;
     const value = e.target.nextSibling.value;
@@ -18,15 +24,15 @@ function Calculator() {
     switch (input) {
       case "gravescount":
         val = Number(value) - 1;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       case "widthcount":
         val = Number(value) - 120;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       case "heightcount":
         val = Number(value) - 120;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       default:
         console.log("asdf");
@@ -40,15 +46,15 @@ function Calculator() {
     switch (input) {
       case "gravescount":
         val = Number(value) + 1;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       case "widthcount":
         val = Number(value) + 120;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       case "heightcount":
         val = Number(value) + 120;
-        setCount((prevState) => {return { ...prevState, [input]: val }});
+        hundleChangeCount(input, val);
         break;
       default:
         console.log("asdf");
