@@ -1,44 +1,57 @@
-// import infoImg from '../../../../images/info.png';
-
 import { useState } from "react";
 
 function Calculator() {
   const defaultCount = {
     gravescount: 1,
+    widthcount: 120,
+    heightcount: 120,
   };
   const [count, setCount] = useState(defaultCount);
-  // const []
   function handleSumbit(e) {
     e.preventDefault();
   }
 
-  function setInputValue(input, val) {
+  function hundleDecreaseButton(e) {
+    const input = e.target.nextSibling.name;
+    const value = e.target.nextSibling.value;
+    let val;
     switch (input) {
       case "gravescount":
-        // const value = Number(val) + 1;
-        setCount({ [input]: val });
+        val = Number(value) - 1;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
+        break;
+      case "widthcount":
+        val = Number(value) - 120;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
+        break;
+      case "heightcount":
+        val = Number(value) - 120;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
         break;
       default:
         console.log("asdf");
     }
   }
 
-  function increaseGravesCount(input) {
-    const inputName = input.name;
-    const inputValue = Number(input.value) + 1;
-    setInputValue(inputName, inputValue);
-  }
-
-  function decreaseGravesCount(input) {
-    const inputName = input.name;
-    const inputValue = Number(input.value) - 1;
-    setInputValue(inputName, inputValue);
-  }
-
-  function changeInputCount(e) {
-    const target = e.target;
-    if(target) {
-      target.previousSibling ? increaseGravesCount(target.previousSibling) : decreaseGravesCount(target.nextSibling);
+  function hundleIncreaseButton(e) {
+    const input = e.target.previousSibling.name;
+    const value = e.target.previousSibling.value;
+    let val;
+    switch (input) {
+      case "gravescount":
+        val = Number(value) + 1;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
+        break;
+      case "widthcount":
+        val = Number(value) + 120;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
+        break;
+      case "heightcount":
+        val = Number(value) + 120;
+        setCount((prevState) => {return { ...prevState, [input]: val }});
+        break;
+      default:
+        console.log("asdf");
     }
   }
 
@@ -61,7 +74,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={changeInputCount}
+                  onClick={hundleDecreaseButton}
                 >
                   -
                 </button>
@@ -69,15 +82,15 @@ function Calculator() {
                   className="calculator__input calculator__input_number"
                   id="gravescount"
                   type="number"
-                  min="120"
-                  value={count.gravescount}
+                  min="1"
+                  value={count.gravescount || ""}
                   readOnly
                   name="gravescount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={changeInputCount}
+                  onClick={hundleIncreaseButton}
                 >
                   +
                 </button>
@@ -94,7 +107,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={increaseGravesCount}
+                  onClick={hundleDecreaseButton}
                 >
                   -
                 </button>
@@ -103,14 +116,14 @@ function Calculator() {
                   id="widthcount"
                   type="number"
                   min="120"
-                  value="120"
+                  value={count.widthcount || ""}
                   readOnly
                   name="widthcount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={increaseGravesCount}
+                  onClick={hundleIncreaseButton}
                 >
                   +
                 </button>
@@ -127,7 +140,7 @@ function Calculator() {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={decreaseGravesCount}
+                  onClick={hundleDecreaseButton}
                 >
                   -
                 </button>
@@ -136,14 +149,14 @@ function Calculator() {
                   id="heightcount"
                   type="number"
                   min="120"
-                  value="120"
+                  value={count.heightcount || ""}
                   readOnly
                   name="heightcount"
                 ></input>
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={increaseGravesCount}
+                  onClick={hundleIncreaseButton}
                 >
                   +
                 </button>
