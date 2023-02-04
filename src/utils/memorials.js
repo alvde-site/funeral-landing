@@ -54,6 +54,6 @@ export const catalogData = [
     desc: "Чаще всего устанавливается для двух, трех и более надгробий",
     src: tombstone,
     slideSrc: [tombstoneImg1, tombstoneImg2, tombstoneImg3],
-    price: "300 BYN",
+    price: "1900 BYN",
   },
 ];
