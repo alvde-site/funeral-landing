@@ -1,4 +1,4 @@
-function Result() {
+function Result({result}) {
   return (
     <div className="result" id="result">
       <h3 className="result__title">Расчет стоимости и количества</h3>
@@ -6,21 +6,21 @@ function Result() {
         <ul className="result__material result__material_type_tiles">
           <li>
             <p className="result__item">Количество плит</p>
-            <p className="result__count">5 шт.</p>
+            <p className="result__count">{`${result.tilescount} шт.`}</p>
           </li>
           <li>
             <p className="result__item">Стоимость плит</p>
-            <p className="result__count">45 BYN</p>
+            <p className="result__count">{`${result.tilesprice} BYN`}</p>
           </li>
         </ul>
         <ul className="result__material result__material_type_curbs">
           <li>
             <p className="result__item">Количество бордюров</p>
-            <p className="result__count">5 шт.</p>
+            <p className="result__count">{`${result.curbscount} шт.`}</p>
           </li>
           <li>
             <p className="result__item">Стоимость бордюров</p>
-            <p className="result__count">45 BYN</p>
+            <p className="result__count">{`${result.curbsprice} BYN`}</p>
           </li>
         </ul>
         <p className="result__item">Итог</p>

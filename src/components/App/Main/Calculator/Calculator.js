@@ -8,9 +8,39 @@ function Calculator() {
     lengthcount: 120,
     tilesize: 900,
   };
+
+  const defaultResult = {
+    tilescount: 0,
+    tilesprice: 0,
+    curbscount: 0,
+    curbsprice: 0,
+  };
+
+  const priceList = {
+    tile30: 90,
+    tile60: 150,
+    curb: {
+      needed: true,
+      price: 22,
+    },
+  };
+
   const [count, setCount] = useState(defaultCount);
+  const [result, setResult] = useState(defaultResult);
+
   function handleSumbit(e) {
     e.preventDefault();
+    calculations(count, priceList);
+  }
+
+  function calculations(count, priceList) {
+    const tilesCount = (count.widthcount * count.lengthcount) / count.tilesize;
+    const tilesPrice =
+      tilesCount * (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
+
+    setResult((prevState) => {
+      return { ...prevState, tilescount:tilesCount, tilesprice: tilesPrice }
+    });
   }
 
   function hundleChangeCount(inputElement, newValue) {
@@ -223,7 +253,7 @@ function Calculator() {
           </fieldset>
           <div className="calculator__buttons">
             <input
-              type="button"
+              type="submit"
               id="resultButton"
               value="Рассчитать"
               className="calculator__submit-button"
@@ -237,7 +267,7 @@ function Calculator() {
             ></input>
           </div>
         </form>
-        <Result />
+        <Result result={result} count={count} />
       </div>
     </section>
   );
