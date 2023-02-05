@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Result from "./Result/Result";
 
 function Calculator() {
   const defaultCount = {
@@ -92,7 +93,7 @@ function Calculator() {
 
   return (
     <section className="calculator">
-      <h3 className="calculator__title">Калькулятор благоустройства</h3>
+      <h2 className="calculator__title">Калькулятор благоустройства</h2>
       <div className="calculator__content">
         <form
           className="calculator__form"
@@ -235,32 +236,8 @@ function Calculator() {
               className="calculator__submit-button"
             ></input>
           </div>
-          <p>
-            Расчет является предварительным. Точные условия можно узнать по
-            телефону.
-          </p>
         </form>
-        <div className="result" id="result">
-          <h3>Расчет стоимости и количества</h3>
-          <div className="calc">
-            <div className="result__tile">
-              <p>
-                Количество плит: <span id="tile-count"></span> шт.
-              </p>
-              <p>
-                Стоимость плит: <span id="tile-price"></span>
-              </p>
-              <p id="curb-count"></p>
-              <p id="curb-price"></p>
-              <p>
-                Итог: <span id="improveResult"></span>
-              </p>
-            </div>
-            <div className="result__button">
-              <input type="button" value="Оформить заявку"></input>
-            </div>
-          </div>
-        </div>
+        <Result />
       </div>
     </section>
   );
