@@ -7,6 +7,7 @@ function Calculator() {
     widthcount: 120,
     lengthcount: 120,
     tilesize: 900,
+    neededcurbs: false,
   };
 
   const defaultResult = {
@@ -20,10 +21,7 @@ function Calculator() {
   const priceList = {
     tile30: 90,
     tile60: 150,
-    curb: {
-      needed: true,
-      price: 22,
-    },
+    curb: 22,
   };
 
   const [count, setCount] = useState(defaultCount);
@@ -37,11 +35,30 @@ function Calculator() {
   function calculations(count, priceList) {
     const tilesCount = (count.widthcount * count.lengthcount) / count.tilesize;
     const tilesPrice =
-      tilesCount * (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
-    const totalCount = tilesPrice;
+      tilesCount *
+      (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
+
+    let curbsCount = 0;
+    let curbsPrice = 0;
+
+    if (count.needcurb) {
+      curbsCount = Math.ceil(
+        ((count.widthcount + count.lengthcount) * 2 + 8 * 3) / 100
+      );
+      curbsPrice = curbsCount * priceList.curb;
+    }
+
+    const totalCount = tilesPrice + curbsPrice;
 
     setResult((prevState) => {
-      return { ...prevState, tilescount:tilesCount, tilesprice: tilesPrice, total: totalCount }
+      return {
+        ...prevState,
+        tilescount: tilesCount,
+        tilesprice: tilesPrice,
+        curbscount: curbsCount,
+        curbsprice: curbsPrice,
+        total: totalCount,
+      };
     });
   }
 
@@ -121,6 +138,14 @@ function Calculator() {
         hundleChangeCount("lengthcount", newValue);
       }
     }
+  }
+
+  function hundleCheckChange(e) {
+    const inputElement = e.target.name;
+    const newValue = !count.needcurb;
+    setCount((prevState) => {
+      return { ...prevState, [inputElement]: newValue };
+    });
   }
 
   return (
@@ -250,7 +275,13 @@ function Calculator() {
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
-            <input type="checkbox" id="needcurb"></input>
+            <input
+              type="checkbox"
+              name="needcurb"
+              id="needcurb"
+              checked={count.needcurb || false}
+              onChange={hundleCheckChange}
+            ></input>
             <span className="needcurb">Нужно установить бордюры</span>
           </fieldset>
           <div className="calculator__buttons">
@@ -259,7 +290,6 @@ function Calculator() {
               id="resultButton"
               value="Рассчитать"
               className="calculator__submit-button"
-              href="#result"
             ></input>
             <input
               type="reset"
