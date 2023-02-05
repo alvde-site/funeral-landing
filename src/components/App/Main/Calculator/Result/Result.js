@@ -6,7 +6,7 @@ function Result({result}) {
         <ul className="result__material result__material_type_tiles">
           <li>
             <p className="result__item">Количество плит</p>
-            <p className="result__count">{`${result.tilescount} шт.`}</p>
+            <p className="result__count">{`${result.tilescount} м²`}</p>
           </li>
           <li>
             <p className="result__item">Стоимость плит</p>

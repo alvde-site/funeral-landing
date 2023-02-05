@@ -5,7 +5,7 @@ function Calculator() {
   const defaultCount = {
     gravescount: 1,
     widthcount: 120,
-    lengthcount: 120,
+    lengthcount: 210,
     tilesize: 900,
     neededcurbs: false,
   };
@@ -33,7 +33,9 @@ function Calculator() {
   }
 
   function calculations(count, priceList) {
-    const tilesCount = (count.widthcount * count.lengthcount) / count.tilesize;
+    const tilesCount = Math.ceil(
+      (count.widthcount / 100) * (count.lengthcount / 100)
+    );
     const tilesPrice =
       tilesCount *
       (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
@@ -43,7 +45,7 @@ function Calculator() {
 
     if (count.needcurb) {
       curbsCount = Math.ceil(
-        ((count.widthcount + count.lengthcount) * 2 + 8 * 3) / 100
+        ((count.widthcount + count.lengthcount) * 2 + 8 * 4) / 100
       );
       curbsPrice = curbsCount * priceList.curb;
     }
@@ -63,14 +65,19 @@ function Calculator() {
   }
 
   function hundleChangeCount(inputElement, newValue) {
-    newValue > 0 &&
-      setCount((prevState) => {
-        return { ...prevState, [inputElement]: newValue };
-      });
+    setCount((prevState) => {
+      return { ...prevState, [inputElement]: newValue };
+    });
+  }
+
+  function hundleCheckChange(e) {
+    const input = e.target.name;
+    const val = !count.needcurb;
+    hundleChangeCount(input, val);
   }
 
   function selectLengthCountNumber() {
-    return Number(count.tilesize) === 900 ? 30 : 60;
+    return Number(count.tilesize) === 900 ? 15 : 20;
   }
 
   function hundleDecreaseButton(e) {
@@ -80,11 +87,11 @@ function Calculator() {
     switch (input) {
       case "gravescount":
         val = Number(value) - 1;
-        hundleChangeCount(input, val);
+        val > 0 && hundleChangeCount(input, val);
         break;
       case "widthcount":
         val = Number(value) - 120;
-        hundleChangeCount(input, val);
+        val > 0 && hundleChangeCount(input, val);
         const gravesCount = val < count.gravescount * 120 ? val / 120 : null;
         if (gravesCount) {
           hundleChangeCount("gravescount", gravesCount);
@@ -93,7 +100,7 @@ function Calculator() {
       case "lengthcount":
         let countNumber = selectLengthCountNumber();
         val = Number(value) - countNumber;
-        val >= 120 && hundleChangeCount(input, val);
+        val >= 210 && hundleChangeCount(input, val);
         break;
       default:
         console.log("Ошибка");
@@ -127,25 +134,28 @@ function Calculator() {
     }
   }
 
+  function hundleExtraLength(extraLength) {
+    console.log("лишняя длина", extraLength);
+    if (extraLength) {
+      const newValue = Number(count.lengthcount) + extraLength;
+      hundleChangeCount("lengthcount", newValue);
+    }
+  }
+
   function hundleSelectChange(e) {
     const target = e.target;
     const name = target.name;
     const value = target.value;
     hundleChangeCount(name, value);
     if (Number(value) === 3600) {
-      if (count.lengthcount % 60) {
-        const newValue = Number(count.lengthcount) + 30;
-        hundleChangeCount("lengthcount", newValue);
-      }
+      const extraLength = 20 - (count.lengthcount % 20);
+      20 !== extraLength && hundleExtraLength(extraLength);
     }
-  }
 
-  function hundleCheckChange(e) {
-    const inputElement = e.target.name;
-    const newValue = !count.needcurb;
-    setCount((prevState) => {
-      return { ...prevState, [inputElement]: newValue };
-    });
+    if (Number(value) === 900) {
+      const extraLength = 15 - (count.lengthcount % 15);
+      15 !== extraLength && hundleExtraLength(extraLength);
+    }
   }
 
   return (
