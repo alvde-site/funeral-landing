@@ -9,6 +9,7 @@ import Reviews from "./Reviews/Reviews";
 import Conditions from "./Conditions/Conditions";
 import Topnav from "./Topnav/Topnav";
 import Catalog from "./Catalog/Catalog";
+import Calculator from "./Calculator/Calculator";
 
 function Main(props) {
   return (
@@ -31,6 +32,7 @@ function Main(props) {
       />
       <About />
       <Reviews />
+      <Calculator />
       <Conditions />
 
     </main>

@@ -17,6 +17,8 @@
 @import url(../components/App/Main/Faq/FaqQuestion/FaqQuestion.css);
 @import url(../components/App/Main/About/About.css);
 @import url(../components/App/Main/Reviews/Reviews.css);
+@import url(../components/App/Main/Calculator/Calculator.css);
+@import url(../components/App/Main/Calculator/Result/Result.css);
 @import url(../components/App/Main/Conditions/Conditions.css);
 /* footer */
 @import url(../components/App/Footer/Footer.css);

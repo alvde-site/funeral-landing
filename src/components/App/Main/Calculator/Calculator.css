@@ -1,0 +1,132 @@
+.calculator {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 70px 0 50px;
+}
+
+.calculator__title {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 43px;
+  color: #000;
+  padding: 0 15px;
+  margin: 0 0 68px;
+  text-align: center;
+}
+
+.calculator__content {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 320px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.calculator__form {
+  width: 270px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.calculator__fieldset {
+  width: 100%;
+  border: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.calculator__label {
+  display: block;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000;
+}
+
+.calculator__field {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  position: relative;
+  width: 100%;
+}
+
+.calculator__count-button {
+  position: absolute;
+  width: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.calculator__count-button_minus {
+  left: 20px;
+}
+.calculator__count-button_plus {
+  right: 20px;
+}
+
+.calculator__input {
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+  text-align: center;
+  height: 32px;
+  width: 100%;
+  border: none;
+  background: #f8f9fa;
+}
+
+.calculator__input_number {
+  display: block;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
+
+.calculator__info {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  color: rgba(0,0,0,.5);
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator__submit-button {
+  min-width: 120px;
+  height: 38px;
+  background-color: rgba(171, 12, 0, 1);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0;
+  overflow: hidden;
+}
