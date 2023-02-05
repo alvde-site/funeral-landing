@@ -24,7 +24,7 @@ function Result({result}) {
           </li>
         </ul>
         <p className="result__item">Итог</p>
-        <p className="result__count">4555 BYN</p>
+        <p className="result__count">{`${result.total} BYN`}</p>
         <input
           type="button"
           value="Оформить заявку"

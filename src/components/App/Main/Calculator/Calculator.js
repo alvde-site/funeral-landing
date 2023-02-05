@@ -14,6 +14,7 @@ function Calculator() {
     tilesprice: 0,
     curbscount: 0,
     curbsprice: 0,
+    total: 0,
   };
 
   const priceList = {
@@ -37,9 +38,10 @@ function Calculator() {
     const tilesCount = (count.widthcount * count.lengthcount) / count.tilesize;
     const tilesPrice =
       tilesCount * (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
+    const totalCount = tilesPrice;
 
     setResult((prevState) => {
-      return { ...prevState, tilescount:tilesCount, tilesprice: tilesPrice }
+      return { ...prevState, tilescount:tilesCount, tilesprice: tilesPrice, total: totalCount }
     });
   }
 
