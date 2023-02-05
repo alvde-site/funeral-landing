@@ -3,29 +3,38 @@ function Result() {
     <div className="result" id="result">
       <h3 className="result__title">Расчет стоимости и количества</h3>
       <div className="result__content">
-        <div className="result__tile">
-          <p>
-            Количество плит: <span id="tile-count"></span> шт.
-          </p>
-          <p>
-            Стоимость плит: <span id="tile-price"></span>
-          </p>
-          <p id="curb-count"></p>
-          <p id="curb-price"></p>
-          <p>
-            Итог: <span id="improveResult"></span>
-          </p>
-        </div>
+        <ul className="result__material result__material_type_tiles">
+          <li>
+            <p className="result__item">Количество плит</p>
+            <p className="result__count">5 шт.</p>
+          </li>
+          <li>
+            <p className="result__item">Стоимость плит</p>
+            <p className="result__count">45 BYN</p>
+          </li>
+        </ul>
+        <ul className="result__material result__material_type_curbs">
+          <li>
+            <p className="result__item">Количество бордюров</p>
+            <p className="result__count">5 шт.</p>
+          </li>
+          <li>
+            <p className="result__item">Стоимость бордюров</p>
+            <p className="result__count">45 BYN</p>
+          </li>
+        </ul>
+        <p className="result__item">Итог</p>
+        <p className="result__count">4555 BYN</p>
         <input
           type="button"
           value="Оформить заявку"
-          className="calculator__submit-button"
+          className="result__button"
         ></input>
-        <p>
-          Этот расчёт не является публичной офертой. Точные условия можно узнать
-          по телефону.
-        </p>
       </div>
+      <p className="result__condition">
+        Этот расчёт не является публичной офертой. Точные условия можно узнать
+        по телефону.
+      </p>
     </div>
   );
 }
