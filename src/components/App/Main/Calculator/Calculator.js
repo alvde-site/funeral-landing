@@ -4,7 +4,7 @@ import Result from "./Result/Result";
 function Calculator() {
   const defaultCount = {
     gravescount: 1,
-    widthcount: 120,
+    widthcount: 110,
     lengthcount: 210,
     tilesize: 900,
     neededcurbs: false,
@@ -84,6 +84,7 @@ function Calculator() {
   function hundleDecreaseButton(e) {
     const input = e.target.nextSibling.name;
     const value = e.target.nextSibling.value;
+    let countNumber = selectLengthCountNumber();
     let val;
     switch (input) {
       case "gravescount":
@@ -91,15 +92,14 @@ function Calculator() {
         val > 0 && hundleChangeCount(input, val);
         break;
       case "widthcount":
-        val = Number(value) - 120;
+        val = Number(value) - countNumber;
         val > 0 && hundleChangeCount(input, val);
-        const gravesCount = val < count.gravescount * 120 ? val / 120 : null;
+        const gravesCount = val < count.gravescount * 110 ? val / 110 : null;
         if (gravesCount) {
           hundleChangeCount("gravescount", gravesCount);
         }
         break;
       case "lengthcount":
-        let countNumber = selectLengthCountNumber();
         val = Number(value) - countNumber;
         val >= 210 && hundleChangeCount(input, val);
         break;
@@ -111,22 +111,22 @@ function Calculator() {
   function hundleIncreaseButton(e) {
     const input = e.target.previousSibling.name;
     const value = e.target.previousSibling.value;
+    let countNumber = selectLengthCountNumber();
     let val;
     switch (input) {
       case "gravescount":
         val = Number(value) + 1;
         hundleChangeCount(input, val);
-        const widthCount = count.widthcount < val * 120 ? val * 120 : null;
+        const widthCount = count.widthcount < val * 110 ? val * 110 : null;
         if (widthCount) {
           hundleChangeCount("widthcount", widthCount);
         }
         break;
       case "widthcount":
-        val = Number(value) + 120;
+        val = Number(value) + countNumber;
         hundleChangeCount(input, val);
         break;
       case "lengthcount":
-        let countNumber = selectLengthCountNumber();
         val = Number(value) + countNumber;
         hundleChangeCount(input, val);
         break;
@@ -135,11 +135,22 @@ function Calculator() {
     }
   }
 
-  function hundleExtraLength(extraLength) {
-    console.log("лишняя длина", extraLength);
+  function hundleExtraSize(extraLength, countItem) {
     if (extraLength) {
-      const newValue = Number(count.lengthcount) + extraLength;
+      const newValue = Number(countItem) + extraLength;
       hundleChangeCount("lengthcount", newValue);
+    }
+  }
+
+  function getExtraSize(value, countItem) {
+    if (Number(value) === 3600) {
+      const extraLength = 20 - (countItem % 20);
+      return 20 !== extraLength ? extraLength : 0;
+    }
+
+    if (Number(value) === 900) {
+      const extraLength = 15 - (countItem % 15);
+      return 15 !== extraLength ? extraLength : 0;
     }
   }
 
@@ -148,15 +159,8 @@ function Calculator() {
     const name = target.name;
     const value = target.value;
     hundleChangeCount(name, value);
-    if (Number(value) === 3600) {
-      const extraLength = 20 - (count.lengthcount % 20);
-      20 !== extraLength && hundleExtraLength(extraLength);
-    }
-
-    if (Number(value) === 900) {
-      const extraLength = 15 - (count.lengthcount % 15);
-      15 !== extraLength && hundleExtraLength(extraLength);
-    }
+    const extraLength = getExtraSize(value, count.lengthcount);
+    hundleExtraSize(extraLength, count.lengthcount);
   }
 
   return (
