@@ -9,13 +9,13 @@ function Result({ result }) {
   }
 
   function setWhatsappMessage() {
-    return `https://wa.me/375292415567?text=Здравствуйте, ваш калькулятор мне рассчитал следующие данные:
+    return `https://wa.me/375292415567?text=Здравствуйте, ваш калькулятор мне рассчитал следующее:
     1) Количество плит ${result.tilescount}м²
     2) Стоимость плит ${result.tilesprice} BYN
-    3) Количество плит ${result.curbscount}шт
-    4) Стоимость плит ${result.curbsprice} BYN
+    3) Количество бордюров ${result.curbscount}шт
+    4) Стоимость бордюров ${result.curbsprice} BYN
     5) Итог ${result.total} BYN.
-    Хоту уточнить стоимость работ и задать вопросы.`;
+    Хочу уточнить стоимость работ и задать вопросы.`;
   }
 
   let whatsappFeedback = setWhatsappMessage();
