@@ -33,9 +33,10 @@ function Calculator() {
   }
 
   function calculations(count, priceList) {
-    const tilesCount = Math.ceil(
-      (count.widthcount / 100) * (count.lengthcount / 100)
-    );
+    const tilesCount = (
+      (count.widthcount / 100) *
+      (count.lengthcount / 100)
+    ).toFixed(1);
     const tilesPrice =
       tilesCount *
       (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
