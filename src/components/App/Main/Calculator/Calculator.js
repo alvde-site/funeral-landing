@@ -4,7 +4,7 @@ import Result from "./Result/Result";
 function Calculator() {
   const defaultCount = {
     gravescount: 1,
-    widthcount: 110,
+    widthcount: 120,
     lengthcount: 210,
     tilesize: 900,
     neededcurbs: false,
@@ -34,8 +34,7 @@ function Calculator() {
 
   function calculations(count, priceList) {
     const tilesCount = (
-      (count.widthcount / 100) *
-      (count.lengthcount / 100)
+      Math.ceil((count.widthcount / 100) * (count.lengthcount / 100) * 2) / 2
     ).toFixed(1);
     const tilesPrice =
       tilesCount *
@@ -93,15 +92,20 @@ function Calculator() {
         break;
       case "widthcount":
         val = Number(value) - countNumber;
-        val > 0 && hundleChangeCount(input, val);
-        const gravesCount = val < count.gravescount * 110 ? val / 110 : null;
+        val >= 120
+          ? hundleChangeCount(input, val)
+          : hundleChangeCount(input, 120);
+        const gravesCount =
+          val < count.gravescount * 110 ? Math.floor(val / 110) : null;
         if (gravesCount) {
           hundleChangeCount("gravescount", gravesCount);
         }
         break;
       case "lengthcount":
         val = Number(value) - countNumber;
-        val >= 210 && hundleChangeCount(input, val);
+        val >= 210
+          ? hundleChangeCount(input, val)
+          : hundleChangeCount(input, 210);
         break;
       default:
         console.log("Ошибка");
@@ -135,10 +139,10 @@ function Calculator() {
     }
   }
 
-  function hundleExtraSize(extraLength, countItem) {
+  function hundleExtraSize(extraLength, countItem, inputName) {
     if (extraLength) {
       const newValue = Number(countItem) + extraLength;
-      hundleChangeCount("lengthcount", newValue);
+      hundleChangeCount(inputName, newValue);
     }
   }
 
@@ -160,7 +164,9 @@ function Calculator() {
     const value = target.value;
     hundleChangeCount(name, value);
     const extraLength = getExtraSize(value, count.lengthcount);
-    hundleExtraSize(extraLength, count.lengthcount);
+    hundleExtraSize(extraLength, count.lengthcount, "lengthcount");
+    const extraWidth = getExtraSize(value, count.widthcount);
+    hundleExtraSize(extraWidth, count.widthcount, "widthcount");
   }
 
   return (
