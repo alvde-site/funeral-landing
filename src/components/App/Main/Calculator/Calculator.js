@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Result from "./Result/Result";
 import { infoImageFoto } from "../../../../utils/constants";
 
@@ -17,6 +17,7 @@ function Calculator(props) {
     curbscount: 0,
     curbsprice: 0,
     total: 0,
+    isHiddenResult: true,
   };
 
   const priceList = {
@@ -27,6 +28,13 @@ function Calculator(props) {
 
   const [count, setCount] = useState(defaultCount);
   const [result, setResult] = useState(defaultResult);
+  const fieldRef = useRef(null);
+  const handleScrollToRelult = () => {
+    if (fieldRef) {
+      console.log(fieldRef.current);
+      fieldRef.current.scrollIntoView();
+    }
+  };
 
   function handleInfoPopup() {
     props.onInfoClick(infoImageFoto);
@@ -35,6 +43,10 @@ function Calculator(props) {
   function handleSumbit(e) {
     e.preventDefault();
     calculations(count, priceList);
+    setResult((state) => {
+      return { ...state, isHiddenResult: false };
+    });
+    handleScrollToRelult();
   }
 
   function calculations(count, priceList) {
@@ -69,23 +81,23 @@ function Calculator(props) {
     });
   }
 
-  function hundleChangeCount(inputElement, newValue) {
+  function handleChangeCount(inputElement, newValue) {
     setCount((prevState) => {
       return { ...prevState, [inputElement]: newValue };
     });
   }
 
-  function hundleCheckChange(e) {
+  function handleCheckChange(e) {
     const input = e.target.name;
     const val = !count.needcurb;
-    hundleChangeCount(input, val);
+    handleChangeCount(input, val);
   }
 
   function selectLengthCountNumber() {
     return Number(count.tilesize) === 900 ? 15 : 20;
   }
 
-  function hundleDecreaseButton(e) {
+  function handleDecreaseButton(e) {
     const input = e.target.nextSibling.name;
     const value = e.target.nextSibling.value;
     let countNumber = selectLengthCountNumber();
@@ -93,31 +105,31 @@ function Calculator(props) {
     switch (input) {
       case "gravescount":
         val = Number(value) - 1;
-        val > 0 && hundleChangeCount(input, val);
+        val > 0 && handleChangeCount(input, val);
         break;
       case "widthcount":
         val = Number(value) - countNumber;
         val >= 120
-          ? hundleChangeCount(input, val)
-          : hundleChangeCount(input, 120);
+          ? handleChangeCount(input, val)
+          : handleChangeCount(input, 120);
         const gravesCount =
           val < count.gravescount * 110 ? Math.floor(val / 110) : null;
         if (gravesCount) {
-          hundleChangeCount("gravescount", gravesCount);
+          handleChangeCount("gravescount", gravesCount);
         }
         break;
       case "lengthcount":
         val = Number(value) - countNumber;
         val >= 210
-          ? hundleChangeCount(input, val)
-          : hundleChangeCount(input, 210);
+          ? handleChangeCount(input, val)
+          : handleChangeCount(input, 210);
         break;
       default:
         console.log("Ошибка");
     }
   }
 
-  function hundleIncreaseButton(e) {
+  function handleIncreaseButton(e) {
     const input = e.target.previousSibling.name;
     const value = e.target.previousSibling.value;
     let countNumber = selectLengthCountNumber();
@@ -125,29 +137,29 @@ function Calculator(props) {
     switch (input) {
       case "gravescount":
         val = Number(value) + 1;
-        hundleChangeCount(input, val);
+        handleChangeCount(input, val);
         const widthCount = count.widthcount < val * 110 ? val * 110 : null;
         if (widthCount) {
-          hundleChangeCount("widthcount", widthCount);
+          handleChangeCount("widthcount", widthCount);
         }
         break;
       case "widthcount":
         val = Number(value) + countNumber;
-        hundleChangeCount(input, val);
+        handleChangeCount(input, val);
         break;
       case "lengthcount":
         val = Number(value) + countNumber;
-        hundleChangeCount(input, val);
+        handleChangeCount(input, val);
         break;
       default:
         console.log("Ошибка");
     }
   }
 
-  function hundleExtraSize(extraLength, countItem, inputName) {
+  function handleExtraSize(extraLength, countItem, inputName) {
     if (extraLength) {
       const newValue = Number(countItem) + extraLength;
-      hundleChangeCount(inputName, newValue);
+      handleChangeCount(inputName, newValue);
     }
   }
 
@@ -163,15 +175,15 @@ function Calculator(props) {
     }
   }
 
-  function hundleSelectChange(e) {
+  function handleSelectChange(e) {
     const target = e.target;
     const name = target.name;
     const value = target.value;
-    hundleChangeCount(name, value);
+    handleChangeCount(name, value);
     const extraLength = getExtraSize(value, count.lengthcount);
-    hundleExtraSize(extraLength, count.lengthcount, "lengthcount");
+    handleExtraSize(extraLength, count.lengthcount, "lengthcount");
     const extraWidth = getExtraSize(value, count.widthcount);
-    hundleExtraSize(extraWidth, count.widthcount, "widthcount");
+    handleExtraSize(extraWidth, count.widthcount, "widthcount");
   }
 
   return (
@@ -193,7 +205,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={hundleDecreaseButton}
+                  onClick={handleDecreaseButton}
                 >
                   -
                 </button>
@@ -208,7 +220,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={hundleIncreaseButton}
+                  onClick={handleIncreaseButton}
                 >
                   +
                 </button>
@@ -227,7 +239,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={hundleDecreaseButton}
+                  onClick={handleDecreaseButton}
                 >
                   -
                 </button>
@@ -242,7 +254,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={hundleIncreaseButton}
+                  onClick={handleIncreaseButton}
                 >
                   +
                 </button>
@@ -261,7 +273,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_minus"
                   type="button"
-                  onClick={hundleDecreaseButton}
+                  onClick={handleDecreaseButton}
                 >
                   -
                 </button>
@@ -276,7 +288,7 @@ function Calculator(props) {
                 <button
                   className="calculator__count-button calculator__count-button_plus"
                   type="button"
-                  onClick={hundleIncreaseButton}
+                  onClick={handleIncreaseButton}
                 >
                   +
                 </button>
@@ -297,7 +309,7 @@ function Calculator(props) {
                   id="tilesize"
                   className="calculator__input"
                   value={count.tilesize}
-                  onChange={hundleSelectChange}
+                  onChange={handleSelectChange}
                 >
                   <option value="900">Плитка 30*30</option>
                   <option value="3600">Керамогранит 60*60</option>
@@ -314,11 +326,11 @@ function Calculator(props) {
               name="needcurb"
               id="needcurb"
               checked={count.needcurb || false}
-              onChange={hundleCheckChange}
+              onChange={handleCheckChange}
             ></input>
             <span className="needcurb">Нужно установить бордюры</span>
           </fieldset>
-          <div className="calculator__buttons">
+          <div className="calculator__buttons"  ref={fieldRef}>
             <input
               type="submit"
               id="resultButton"
@@ -333,7 +345,7 @@ function Calculator(props) {
             ></input>
           </div>
         </form>
-        <Result result={result} count={count} />
+        <Result result={result} count={count}/>
       </div>
     </section>
   );

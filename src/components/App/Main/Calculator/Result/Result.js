@@ -1,6 +1,6 @@
 function Result({result}) {
   return (
-    <div className="result" id="result">
+    <div className={`result ${result.isHiddenResult&&"result__hidden"}`} id="result">
       <h3 className="result__title">Расчет стоимости и количества</h3>
       <div className="result__content">
         <ul className="result__material result__material_type_tiles">

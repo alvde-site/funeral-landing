@@ -1,3 +1,7 @@
+.result__hidden {
+  display: none;
+}
+
 .result__content {
   width: 270px;
   margin: 0 auto;
