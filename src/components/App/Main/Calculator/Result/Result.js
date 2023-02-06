@@ -13,7 +13,7 @@ function Result({result}) {
             <p className="result__count">{`${result.tilesprice} BYN`}</p>
           </li>
         </ul>
-        <ul className="result__material result__material_type_curbs">
+        <ul className={`result__material ${!result.curbscount&&"result__material_hidden"}`}>
           <li>
             <p className="result__item">Количество бордюров</p>
             <p className="result__count">{`${result.curbscount} шт.`}</p>
