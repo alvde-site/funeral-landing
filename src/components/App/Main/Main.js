@@ -32,7 +32,7 @@ function Main(props) {
       />
       <About />
       <Reviews />
-      <Calculator />
+      <Calculator onInfoClick={props.onImageClick}/>
       <Conditions />
 
     </main>

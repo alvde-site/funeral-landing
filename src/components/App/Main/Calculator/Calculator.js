@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Result from "./Result/Result";
+import { infoImageFoto } from "../../../../utils/constants";
 
-function Calculator() {
+function Calculator(props) {
   const defaultCount = {
     gravescount: 1,
     widthcount: 120,
@@ -26,6 +27,10 @@ function Calculator() {
 
   const [count, setCount] = useState(defaultCount);
   const [result, setResult] = useState(defaultResult);
+
+  function handleInfoPopup() {
+    props.onInfoClick(infoImageFoto);
+  }
 
   function handleSumbit(e) {
     e.preventDefault();
@@ -208,7 +213,9 @@ function Calculator() {
                   +
                 </button>
               </div>
-              <span className="calculator__info">?</span>
+              <span className="calculator__info" onClick={handleInfoPopup}>
+                ?
+              </span>
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
@@ -240,7 +247,9 @@ function Calculator() {
                   +
                 </button>
               </div>
-              <span className="calculator__info">?</span>
+              <span className="calculator__info" onClick={handleInfoPopup}>
+                ?
+              </span>
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
@@ -272,7 +281,9 @@ function Calculator() {
                   +
                 </button>
               </div>
-              <span className="calculator__info">?</span>
+              <span className="calculator__info" onClick={handleInfoPopup}>
+                ?
+              </span>
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">
@@ -292,7 +303,9 @@ function Calculator() {
                   <option value="3600">Керамогранит 60*60</option>
                 </select>
               </div>
-              <span className="calculator__info">?</span>
+              <span className="calculator__info" onClick={handleInfoPopup}>
+                ?
+              </span>
             </div>
           </fieldset>
           <fieldset className="calculator__fieldset">

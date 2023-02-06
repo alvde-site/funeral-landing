@@ -68,10 +68,10 @@
   padding: 0 10px;
 }
 .calculator__count-button_minus {
-  left: 20px;
+  left: 0;
 }
 .calculator__count-button_plus {
-  right: 20px;
+  right: 25px;
 }
 
 .calculator__input {
@@ -104,7 +104,7 @@
   font-size: 12px;
   line-height: 28px;
   color: rgba(0,0,0,.5);
-  text-align: center;
+  text-align: right;
   cursor: pointer;
 }
 

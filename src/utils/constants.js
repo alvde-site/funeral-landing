@@ -14,6 +14,7 @@ import portfolioFoto4 from "../images/portfolio4.jpg";
 import portfolioFoto4Slide1 from "../images/portfolio4-1.jpg";
 import portfolioFoto4Slide2 from "../images/portfolio4-2.jpg";
 import avatar from "../images/default-avatar.jpg";
+import infoImage from "../images/info.png";
 
 
 import rectangle from "../images/rectangle.jpeg";
@@ -37,6 +38,10 @@ export const formData = {
   inputErrorClass: "form__input_type_error",
   errorClass: "popup__input-error_active",
 };
+
+export const infoImageFoto = {
+  src: infoImage,
+}
 
 export const portfolioImages = [
   {
