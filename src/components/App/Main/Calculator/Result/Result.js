@@ -1,3 +1,5 @@
+import { mtsTel, a1Tel } from "../../../../../utils/constants";
+
 function Result({ result }) {
   function handleFeedback() {
     return `https://wa.me/375292415567?text=Здравствуйте, ваш калькулятор мне рассчитал следующие данные:
@@ -45,11 +47,31 @@ function Result({ result }) {
         <input
           type="button"
           value="Оформить заявку"
-          className="result__button"
+          className={`result__button ${"result__button_hidden"}`}
           onClick={handleFeedback}
         ></input>
-        <br></br>
-        <a href={whatsappFeedback}>Отправить сообщение в whatsapp</a>
+        <ul
+          className={`result__feedback-buttons ${"result__feedback-button_hidden"}`}
+        >
+          <li className="result__feedback result__feedback_type_mts">
+            <a href={`tel:${mtsTel}`} className="result__feedback-link">
+              {" "}
+            </a>
+          </li>
+          <li className="result__feedback result__feedback_type_a1">
+            <a href={`tel:${a1Tel}`} className="result__feedback-link">
+              {" "}
+            </a>
+          </li>
+          <li className="result__feedback result__feedback_type_whatsapp">
+            <a
+              href={whatsappFeedback}
+              className="result__feedback-link"
+            >
+              {" "}
+            </a>
+          </li>
+        </ul>
       </div>
       <p className="result__condition">
         Этот расчёт не является публичной офертой. Точные условия можно узнать
