@@ -49,6 +49,11 @@ function Calculator(props) {
     handleScrollToRelult();
   }
 
+  function handleReset() {
+    setCount(defaultCount);
+    setResult(defaultResult);
+  }
+
   function calculations(count, priceList) {
     const tilesCount = (
       Math.ceil((count.widthcount / 100) * (count.lengthcount / 100) * 2) / 2
@@ -342,6 +347,7 @@ function Calculator(props) {
               id="resetButton"
               value="Сбросить"
               className="calculator__submit-button"
+              onClick={handleReset}
             ></input>
           </div>
         </form>
