@@ -108,6 +108,17 @@
   cursor: pointer;
 }
 
+.calculator__checkbox-desc {
+  display: inline-block;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000;
+  margin: 0 0 0 10px;
+}
+
 .calculator__buttons {
   display: flex;
   justify-content: space-between;

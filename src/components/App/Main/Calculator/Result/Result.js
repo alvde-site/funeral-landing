@@ -1,16 +1,25 @@
+import { useState } from "react";
 import { mtsTel, a1Tel } from "../../../../../utils/constants";
 
 function Result({ result }) {
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   function handleFeedback() {
+    setWhatsappMessage();
+    setIsFeedbackOpen(!isFeedbackOpen);
+  }
+
+  function setWhatsappMessage() {
     return `https://wa.me/375292415567?text=Здравствуйте, ваш калькулятор мне рассчитал следующие данные:
     1) Количество плит ${result.tilescount}м²
     2) Стоимость плит ${result.tilesprice} BYN
-    3) Количество плит ${result.curbscount}шт.
+    3) Количество плит ${result.curbscount}шт
     4) Стоимость плит ${result.curbsprice} BYN
     5) Итог ${result.total} BYN.
-    Хотел бы уточнить стоимость работ и задать вопросы.`;
+    Хоту уточнить стоимость работ и задать вопросы.`;
   }
-  let whatsappFeedback = handleFeedback();
+
+  let whatsappFeedback = setWhatsappMessage();
+
   return (
     <div
       className={`result ${result.isHiddenResult && "result__hidden"}`}
@@ -47,11 +56,15 @@ function Result({ result }) {
         <input
           type="button"
           value="Оформить заявку"
-          className={`result__button ${"result__button_hidden"}`}
+          className={`result__button ${
+            isFeedbackOpen && "result__button_hidden"
+          }`}
           onClick={handleFeedback}
         ></input>
         <ul
-          className={`result__feedback-buttons ${"result__feedback-button_hidden"}`}
+          className={`result__feedback-buttons ${
+            !isFeedbackOpen && "result__feedback-buttons_hidden"
+          }`}
         >
           <li className="result__feedback result__feedback_type_mts">
             <a href={`tel:${mtsTel}`} className="result__feedback-link">
@@ -64,10 +77,7 @@ function Result({ result }) {
             </a>
           </li>
           <li className="result__feedback result__feedback_type_whatsapp">
-            <a
-              href={whatsappFeedback}
-              className="result__feedback-link"
-            >
+            <a href={whatsappFeedback} className="result__feedback-link">
               {" "}
             </a>
           </li>

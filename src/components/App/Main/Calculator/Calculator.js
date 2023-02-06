@@ -333,9 +333,11 @@ function Calculator(props) {
               checked={count.needcurb || false}
               onChange={handleCheckChange}
             ></input>
-            <span className="needcurb">Нужно установить бордюры</span>
+            <span className="calculator__checkbox-desc">
+              Нужно установить бордюры
+            </span>
           </fieldset>
-          <div className="calculator__buttons"  ref={fieldRef}>
+          <div className="calculator__buttons" ref={fieldRef}>
             <input
               type="submit"
               id="resultButton"
@@ -351,7 +353,7 @@ function Calculator(props) {
             ></input>
           </div>
         </form>
-        <Result result={result} count={count}/>
+        <Result result={result} count={count} />
       </div>
     </section>
   );

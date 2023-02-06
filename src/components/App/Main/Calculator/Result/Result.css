@@ -69,6 +69,10 @@
     overflow: hidden;
 }
 
+.result__button_hidden {
+  display: none;
+}
+
 .result__condition {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -86,6 +90,10 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
+}
+
+.result__feedback-buttons_hidden {
+  display: none;
 }
 
 .result__feedback {
@@ -108,4 +116,11 @@
 
 .result__feedback_type_whatsapp {
   background: url(../../../../../images/whatsapp-logo.png) left/contain no-repeat;
+}
+
+.result__feedback-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
