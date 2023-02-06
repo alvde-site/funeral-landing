@@ -67,7 +67,7 @@ function Calculator(props) {
 
     if (count.needcurb) {
       curbsCount = Math.ceil(
-        ((count.widthcount + count.lengthcount) * 2 + 8 * 4) / 100
+        ((count.widthcount + count.lengthcount) * 2 + 0.08 * 4) / 100
       );
       curbsPrice = curbsCount * priceList.curb;
     }
