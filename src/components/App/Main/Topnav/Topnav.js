@@ -150,6 +150,7 @@ function Topnav(props) {
                 Контакты
               </a>
             </li>
+            <li className="topnav__more">Еще</li>
           </ul>
         </div>
       </nav>

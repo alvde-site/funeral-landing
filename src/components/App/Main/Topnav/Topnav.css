@@ -102,6 +102,21 @@
   transition: all 0.15s ease-in-out;
 }
 
+.topnav__more {
+  display: inline-block;
+  padding: 7px 30px 7px 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  background: url(../../../../images/select-arrow.png) right/20px no-repeat;
+}
+
 .topnav__link:hover,
 .topnav__link:active {
   color: #ab0c00;
@@ -220,7 +235,6 @@
   .topnav__content {
     width: 100%;
   }
-
 
   .topnav__email_hidden {
     display: none;
