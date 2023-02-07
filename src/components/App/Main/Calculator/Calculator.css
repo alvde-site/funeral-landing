@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-.calculator__checkbox-desc {
+.calculator__checkbox {
   display: inline-block;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;

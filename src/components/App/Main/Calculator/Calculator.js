@@ -333,9 +333,21 @@ function Calculator(props) {
               checked={count.needcurb || false}
               onChange={handleCheckChange}
             ></input>
-            <span className="calculator__checkbox-desc">
+            <label htmlFor="needcurb" className="calculator__checkbox">
               Нужно установить бордюры
-            </span>
+            </label>
+          </fieldset>
+          <fieldset className="calculator__fieldset">
+            <input
+              type="checkbox"
+              name="onlygraves"
+              id="onlygraves"
+              checked={count.onlygraves || false}
+              onChange={handleCheckChange}
+            ></input>
+            <label htmlFor="onlygraves" className="calculator__checkbox">
+              Плитка только на могилках
+            </label>
           </fieldset>
           <div className="calculator__buttons" ref={fieldRef}>
             <input
