@@ -57,7 +57,12 @@ function Calculator(props) {
   function calculations(count, priceList) {
     const tilesCount = (
       Math.ceil(
-        ((count.onlygraves ? count.gravescount * 110 : count.widthcount) / 100 +
+        ((count.onlygraves
+          ? count.gravescount > 1
+            ? count.gravescount * 110
+            : 120
+          : count.widthcount) /
+          100 +
           count.lengthcount / 100) *
           2 *
           2
