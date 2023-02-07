@@ -9,6 +9,7 @@ function Calculator(props) {
     lengthcount: 210,
     tilesize: 900,
     neededcurbs: false,
+    onlygraves: false,
   };
 
   const defaultResult = {
@@ -31,7 +32,6 @@ function Calculator(props) {
   const fieldRef = useRef(null);
   const handleScrollToRelult = () => {
     if (fieldRef) {
-      console.log(fieldRef.current);
       fieldRef.current.scrollIntoView();
     }
   };
@@ -94,8 +94,20 @@ function Calculator(props) {
 
   function handleCheckChange(e) {
     const input = e.target.name;
-    const val = !count.needcurb;
-    handleChangeCount(input, val);
+    let val;
+    switch (input) {
+      case "neededcurbs":
+        val = !count.neededcurbs;
+        handleChangeCount(input, val);
+        console.log(input, val);
+        break;
+      case "onlygraves":
+        val = !count.onlygraves;
+        handleChangeCount(input, val);
+        break;
+      default:
+        console.log(input, val);
+    }
   }
 
   function selectLengthCountNumber() {
@@ -328,12 +340,12 @@ function Calculator(props) {
           <fieldset className="calculator__fieldset">
             <input
               type="checkbox"
-              name="needcurb"
-              id="needcurb"
-              checked={count.needcurb || false}
+              name="neededcurbs"
+              id="neededcurbs"
+              checked={count.neededcurbs || false}
               onChange={handleCheckChange}
             ></input>
-            <label htmlFor="needcurb" className="calculator__checkbox">
+            <label htmlFor="neededcurbs" className="calculator__checkbox">
               Нужно установить бордюры
             </label>
           </fieldset>
@@ -363,6 +375,7 @@ function Calculator(props) {
               className="calculator__submit-button"
               onClick={handleReset}
             ></input>
+            {console.log(count.neededcurbs, count.gravescount)}
           </div>
         </form>
         <Result result={result} count={count} />
