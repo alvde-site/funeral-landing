@@ -56,7 +56,12 @@ function Calculator(props) {
 
   function calculations(count, priceList) {
     const tilesCount = (
-      Math.ceil((count.widthcount / 100) * (count.lengthcount / 100) * 2) / 2
+      Math.ceil(
+        ((count.onlygraves ? 110 : count.widthcount) / 100 +
+          count.lengthcount / 100) *
+          2 *
+          2
+      ) / 2
     ).toFixed(1);
     const tilesPrice =
       tilesCount *
@@ -65,9 +70,10 @@ function Calculator(props) {
     let curbsCount = 0;
     let curbsPrice = 0;
 
-    if (count.needcurb) {
+    if (count.neededcurbs) {
+      console.log(count.widthcount, count.lengthcount);
       curbsCount = Math.ceil(
-        ((count.widthcount + count.lengthcount) * 2 + 0.08 * 4) / 100
+        (count.widthcount / 100 + count.lengthcount / 100) * 2 + 0.08 * 4
       );
       curbsPrice = curbsCount * priceList.curb;
     }
@@ -99,7 +105,6 @@ function Calculator(props) {
       case "neededcurbs":
         val = !count.neededcurbs;
         handleChangeCount(input, val);
-        console.log(input, val);
         break;
       case "onlygraves":
         val = !count.onlygraves;
@@ -375,7 +380,6 @@ function Calculator(props) {
               className="calculator__submit-button"
               onClick={handleReset}
             ></input>
-            {console.log(count.neededcurbs, count.gravescount)}
           </div>
         </form>
         <Result result={result} count={count} />
