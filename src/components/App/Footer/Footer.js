@@ -51,43 +51,57 @@ function Footer() {
         </ul>
         <nav>
           <h3 className="footer__links-title">Навигация</h3>
-          <ul className="footer__links">
-            <li>
-              <a href="/#services" className="footer__link">
-                Каталог
-              </a>
-            </li>
-            <li>
-              <a href="/#portfolio" className="footer__link">
-                Портфолио
-              </a>
-            </li>
-            <li>
-              <a href="/#grave" className="footer__link">
-                Благоустройства
-              </a>
-            </li>
-            <li>
-              <a href="/#working" className="footer__link">
-                Этапы работы
-              </a>
-            </li>
-            <li>
-              <a href="/#faq" className="footer__link">
-                Вопрос-ответ
-              </a>
-            </li>
-            <li>
-              <a href="/#about" className="footer__link">
-                О компании
-              </a>
-            </li>
-            <li>
-              <a href="#reviews" className="footer__link">
-                Отзывы
-              </a>
-            </li>
-          </ul>
+          <div className="footer__links-container">
+            <ul className="footer__links">
+              <li>
+                <a href="/#services" className="footer__link">
+                  Каталог
+                </a>
+              </li>
+              <li>
+                <a href="/#portfolio" className="footer__link">
+                  Портфолио
+                </a>
+              </li>
+              <li>
+                <a href="/#grave" className="footer__link">
+                  Благоустройства
+                </a>
+              </li>
+              <li>
+                <a href="/#working" className="footer__link">
+                  Этапы работы
+                </a>
+              </li>
+            </ul>
+            <ul className="footer__links">
+              <li>
+                <a href="/#faq" className="footer__link">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li>
+                <a href="/#about" className="footer__link">
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" className="footer__link">
+                  Отзывы
+                </a>
+              </li>
+              <li>
+                <a href="#calculator" className="footer__link">
+                  Калькулятор
+                </a>
+              </li>
+              <li>
+                <a href="#conditions" className="footer__link">
+                  Скидки
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
       <a
