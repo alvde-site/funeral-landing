@@ -215,7 +215,7 @@ function Calculator(props) {
   }
 
   return (
-    <section className="calculator">
+    <section className="calculator" id="calculator">
       <h2 className="calculator__title">Калькулятор благоустройства</h2>
       <div className="calculator__content">
         <form

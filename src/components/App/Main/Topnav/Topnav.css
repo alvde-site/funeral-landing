@@ -102,7 +102,20 @@
   transition: all 0.15s ease-in-out;
 }
 
-.topnav__more {
+.topnav__link:hover,
+.topnav__link:active {
+  color: #ab0c00;
+}
+
+.topnav__dropdown {
+  position: relative;
+  background-color: #e1e1e1;
+  height: 100%;
+}
+
+.topnav__dropdown-button {
+  border: none;
+  margin: 0;
   display: inline-block;
   padding: 7px 30px 7px 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -117,9 +130,19 @@
   background: url(../../../../images/select-arrow.png) right/20px no-repeat;
 }
 
-.topnav__link:hover,
-.topnav__link:active {
+.topnav__dropdown-button:hover {
   color: #ab0c00;
+}
+
+.topnav__dropdown-content {
+  display: none;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  position: absolute;
+  top: 54px;
+  min-width: 100px;
+  background-color: #e1e1e1;
 }
 
 .burger-menu {

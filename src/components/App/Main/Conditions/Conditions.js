@@ -1,6 +1,6 @@
 function Conditions() {
   return (
-    <section className="conditions">
+    <section className="conditions" id="conditions">
       <div className="conditions__content">
         <h2 className="conditions__title">
           Сохраните память о ваших близких...

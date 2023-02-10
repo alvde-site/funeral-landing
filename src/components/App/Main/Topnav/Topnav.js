@@ -116,33 +116,6 @@ function Topnav(props) {
             </li>
             <li>
               <a
-                href="/#faq"
-                className="topnav__link"
-                onClick={handleToggleBurger}
-              >
-                Вопрос-ответ
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="topnav__link"
-                onClick={handleToggleBurger}
-              >
-                О компании
-              </a>
-            </li>
-            <li>
-              <a
-                href="#reviews"
-                className="topnav__link"
-                onClick={handleToggleBurger}
-              >
-                Отзывы
-              </a>
-            </li>
-            <li>
-              <a
                 href="#footer"
                 className="topnav__link"
                 onClick={handleToggleBurger}
@@ -150,7 +123,58 @@ function Topnav(props) {
                 Контакты
               </a>
             </li>
-            <li className="topnav__more">Еще</li>
+            <li className="topnav__dropdown">
+              <button className="topnav__dropdown-button" type="button">
+                Еще
+              </button>
+              <ul className="topnav__dropdown-content topnav_on_shadow">
+                <li>
+                  <a
+                    href="/#faq"
+                    className="topnav__link"
+                    onClick={handleToggleBurger}
+                  >
+                    Вопрос-ответ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className="topnav__link"
+                    onClick={handleToggleBurger}
+                  >
+                    О компании
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#reviews"
+                    className="topnav__link"
+                    onClick={handleToggleBurger}
+                  >
+                    Отзывы
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#calculator"
+                    className="topnav__link"
+                    onClick={handleToggleBurger}
+                  >
+                    Калькулятор
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#conditions"
+                    className="topnav__link"
+                    onClick={handleToggleBurger}
+                  >
+                    Скидки
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
