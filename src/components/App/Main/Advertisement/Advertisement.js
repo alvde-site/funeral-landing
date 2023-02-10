@@ -1,5 +1,4 @@
 function Advertisement() {
-
   return (
     <section className="advertisement">
       <div className="advertisement__content">

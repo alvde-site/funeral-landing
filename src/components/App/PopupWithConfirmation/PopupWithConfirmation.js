@@ -7,7 +7,8 @@ function PopupWithConfirmation(props) {
     <div
       className={`popup popup_handle_${props.name} ${
         props.isOpen ? "popup_opened" : ""
-      }`} onClick={props.onOverlayClose}
+      }`}
+      onClick={props.onOverlayClose}
     >
       <div className="popup__container">
         <button
@@ -15,7 +16,10 @@ function PopupWithConfirmation(props) {
           type="button"
           aria-label="Закрыть"
           onClick={props.onClose}
-        > &#10006;</button>
+        >
+          {" "}
+          &#10006;
+        </button>
         <form
           action="#"
           name={`${props.name}form`}

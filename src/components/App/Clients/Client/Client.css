@@ -59,8 +59,8 @@
 .clients__remove-button {
   width: 40px;
   height: 40px;
-  background: #000 url(../../../../images/svg/remove-button.svg)
-  center/20px no-repeat;
+  background: #000 url(../../../../images/svg/remove-button.svg) center/20px
+    no-repeat;
   padding: 0;
   cursor: pointer;
   transition: 0.2s;
@@ -92,7 +92,7 @@
 
 .clients__more-button_active {
   transform: rotate(270deg);
-  color: #AB0C00;
+  color: #ab0c00;
 }
 
 .clients__description {
@@ -112,7 +112,7 @@
   max-height: 100px;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .clients__data {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -123,4 +123,3 @@
     grid-template-columns: 1fr;
   }
 }
-

@@ -5,7 +5,8 @@ function InfoTooltip(props) {
     <div
       className={`popup popup_handle_${props.name} ${
         props.isOpen && "popup_opened"
-      }`} onClick={props.onOverlayClose}
+      }`}
+      onClick={props.onOverlayClose}
     >
       <div className="popup__container">
         <button
@@ -13,7 +14,9 @@ function InfoTooltip(props) {
           type="button"
           aria-label="Закрыть"
           onClick={props.onClose}
-        >&#10006;</button>
+        >
+          &#10006;
+        </button>
         <div className="info-tooltip">
           <img
             className="info-tooltip__image"

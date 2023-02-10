@@ -31,7 +31,8 @@ function EditClientPopup(props) {
     <div
       className={`popup popup_handle_client ${
         props.isEditClientFormOpen ? "popup_opened" : ""
-      }`} onClick={props.onOverlayClose}
+      }`}
+      onClick={props.onOverlayClose}
     >
       <div className="popup__container">
         <button
@@ -115,7 +116,10 @@ function EditClientPopup(props) {
               {props.errors["clientstatus"] || ""}
             </span>
           </label>
-          <label htmlFor="clientdescription" className="form__field form__field_type_description">
+          <label
+            htmlFor="clientdescription"
+            className="form__field form__field_type_description"
+          >
             <textarea
               id="clientdescription"
               type="text"

@@ -16,7 +16,6 @@ import portfolioFoto4Slide2 from "../images/portfolio4-2.jpg";
 import avatar from "../images/default-avatar.jpg";
 import infoImage from "../images/info.png";
 
-
 import rectangle from "../images/rectangle.jpeg";
 import rectangle1 from "../images/rectangle1.jpeg";
 
@@ -41,7 +40,7 @@ export const formData = {
 
 export const infoImageFoto = {
   src: infoImage,
-}
+};
 
 export const portfolioImages = [
   {
@@ -69,7 +68,10 @@ export const portfolioImages = [
   { src: portfolioFoto1 },
   { src: portfolioFoto2, slideSrc: [portfolioFoto2, portfolioFoto] },
   { src: portfolioFoto3 },
-  { src: portfolioFoto4, slideSrc: [portfolioFoto4, portfolioFoto4Slide1, portfolioFoto4Slide2] },
+  {
+    src: portfolioFoto4,
+    slideSrc: [portfolioFoto4, portfolioFoto4Slide1, portfolioFoto4Slide2],
+  },
 ];
 export const questionsDataList = [
   {
@@ -117,28 +119,31 @@ export const servicesData = [
 export const mtsTel = "+375292415567";
 export const a1Tel = "+375293464968";
 export const email = "sergey.demidenko.1985@mail.ru";
-export const instagram = "https://instagram.com/granitnajapamjat_?igshid=YmMyMTA2M2Y=";
-export const whatsapp = "https://wa.me/375292415567?text=Здравствуйте%2C+у+меня+есть+вопрос";
+export const instagram =
+  "https://instagram.com/granitnajapamjat_?igshid=YmMyMTA2M2Y=";
+export const whatsapp =
+  "https://wa.me/375292415567?text=Здравствуйте%2C+у+меня+есть+вопрос";
 
 // Блок с отзывами
 
 export const reviewsList = [
   {
-    avatar: "https://thumb.tildacdn.com/tild3866-3334-4139-a462-643239303365/-/cover/240x240/center/center/-/format/webp/Svetlana.jpg",
-    name: 'Светлана',
-    location: 'Могилев',
-    text: 'Спасибо Вам за быструю, качественную работу. Спустя два года, все благоустройство выглядит очень красиво. Решили заказать памятник у вас весной. Обязательно порекомендуем вас.'
+    avatar:
+      "https://thumb.tildacdn.com/tild3866-3334-4139-a462-643239303365/-/cover/240x240/center/center/-/format/webp/Svetlana.jpg",
+    name: "Светлана",
+    location: "Могилев",
+    text: "Спасибо Вам за быструю, качественную работу. Спустя два года, все благоустройство выглядит очень красиво. Решили заказать памятник у вас весной. Обязательно порекомендуем вас.",
   },
   {
     avatar: avatar,
-    name: 'Александр',
-    location: 'Могилев',
-    text: 'Недавно делал благоустройство захоронения на Лавсановском кладбище. Подкупило нормальное отношение к работе. Заказывал памятник и оформление могилы плиткой. Не навязывал ненужного, цена приемлемая, все сделал аккуратно и в срок.'
+    name: "Александр",
+    location: "Могилев",
+    text: "Недавно делал благоустройство захоронения на Лавсановском кладбище. Подкупило нормальное отношение к работе. Заказывал памятник и оформление могилы плиткой. Не навязывал ненужного, цена приемлемая, все сделал аккуратно и в срок.",
   },
   {
     avatar: avatar,
-    name: 'Ольга',
-    location: 'Орша',
-    text: 'Выражаем огромную  благодарность Сергею за профессионализм и чуткость при оформлении заказа по благоустройству могилы нашей родственницы. Мы из Оршы, контролировать процесс замены памятника и оградки не было возможности, но когда мы приехали принимать работу, все было сделано быстро, качественно, очень красиво. Пусть Ваша фирма процветает долгие-долгие годы. С уважением, Воробьевы.'
-  }
-]
+    name: "Ольга",
+    location: "Орша",
+    text: "Выражаем огромную  благодарность Сергею за профессионализм и чуткость при оформлении заказа по благоустройству могилы нашей родственницы. Мы из Оршы, контролировать процесс замены памятника и оградки не было возможности, но когда мы приехали принимать работу, все было сделано быстро, качественно, очень красиво. Пусть Ваша фирма процветает долгие-долгие годы. С уважением, Воробьевы.",
+  },
+];

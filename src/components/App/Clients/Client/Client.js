@@ -22,7 +22,7 @@ function Client(props) {
   }
 
   const statusColor = (status) => {
-    switch(status) {
+    switch (status) {
       case "Новый клиент":
         return "clients__data-item_type_new";
       case "В работе":
@@ -32,7 +32,7 @@ function Client(props) {
       default:
         return "clients__data-item_type_new";
     }
-  }
+  };
 
   return (
     <li className="clients__item">

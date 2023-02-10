@@ -8,7 +8,13 @@ function Catalog(props) {
 
       <ul className="services__catalog">
         {catalogData.map((catalogCard, index) => {
-          return <CatalogCard onImageClick={props.onImageClick} catalogCard={catalogCard} key={index} />;
+          return (
+            <CatalogCard
+              onImageClick={props.onImageClick}
+              catalogCard={catalogCard}
+              key={index}
+            />
+          );
         })}
       </ul>
     </section>

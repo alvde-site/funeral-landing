@@ -6,7 +6,9 @@ function PortfolioImage(props) {
     <>
       <li className="portfolio__item">
         <div className="portfolio__overlay">
-          <button className="portfolio__viewing-button" onClick={handleClick}>+</button>
+          <button className="portfolio__viewing-button" onClick={handleClick}>
+            +
+          </button>
         </div>
         <img
           className="portfolio__image"

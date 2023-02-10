@@ -5,7 +5,7 @@ import { formattedTel } from "../../../../utils/utils";
 
 function Topnav(props) {
   const topnav = useRef();
-  const [isShownDropdown, setIsShownDropdown] = useState(false)
+  const [isShownDropdown, setIsShownDropdown] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", getTopPosition);
@@ -136,7 +136,11 @@ function Topnav(props) {
               >
                 Еще
               </button>
-              <ul className={`topnav__dropdown-content ${!isShownDropdown&&"topnav__dropdown-content_hidden"}`}>
+              <ul
+                className={`topnav__dropdown-content ${
+                  !isShownDropdown && "topnav__dropdown-content_hidden"
+                }`}
+              >
                 <li>
                   <a
                     href="/#faq"

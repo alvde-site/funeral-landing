@@ -14,7 +14,9 @@ function CatalogCard(props) {
       <p className="services__price-text">
         от <span className="service__price">{props.catalogCard.price}</span>
       </p>
-      <button className="services__feedback" onClick={handleOpenSlide}>Подробнее</button>
+      <button className="services__feedback" onClick={handleOpenSlide}>
+        Подробнее
+      </button>
     </li>
   );
 }

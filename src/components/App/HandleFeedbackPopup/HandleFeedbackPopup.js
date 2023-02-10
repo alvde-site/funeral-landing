@@ -18,7 +18,8 @@ function HandleFeedbackPopup(props) {
     <div
       className={`popup popup_handle_feedback ${
         props.isOpenFeedBack ? "popup_opened" : ""
-      }`} onClick={props.onOverlayClose}
+      }`}
+      onClick={props.onOverlayClose}
     >
       <div className="popup__container">
         <button
@@ -112,7 +113,11 @@ function HandleFeedbackPopup(props) {
             >
               персональных данных
             </a>
-            <span id="error-conditions" className="form__input-error">{props.checks["feedbackconditions"] ? `${props.errors["feedbackconditions"]}` : "Чтобы продолжить, установите этот флажок."}</span>
+            <span id="error-conditions" className="form__input-error">
+              {props.checks["feedbackconditions"]
+                ? `${props.errors["feedbackconditions"]}`
+                : "Чтобы продолжить, установите этот флажок."}
+            </span>
           </label>
         </form>
       </div>

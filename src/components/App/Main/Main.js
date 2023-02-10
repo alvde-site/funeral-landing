@@ -20,21 +20,18 @@ function Main(props) {
       />
       <Advertisement />
       <Competence />
-      <Catalog onImageClick={props.onImageClick}/>
+      <Catalog onImageClick={props.onImageClick} />
       <Portfolio
         portfolioImages={props.portfolioImages}
         onImageClick={props.onImageClick}
       />
-      <Services servicesData={props.servicesData}/>
+      <Services servicesData={props.servicesData} />
       <Working />
-      <Faq
-        questionsDataList={props.questionsDataList}
-      />
+      <Faq questionsDataList={props.questionsDataList} />
       <About />
       <Reviews />
-      <Calculator onInfoClick={props.onImageClick}/>
+      <Calculator onInfoClick={props.onImageClick} />
       <Conditions />
-
     </main>
   );
 }

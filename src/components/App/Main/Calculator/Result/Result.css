@@ -52,21 +52,21 @@
 }
 
 .result__button {
-    min-width: 120px;
-    height: 38px;
-    background-color: rgba(171, 12, 0, 1);
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #fff;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.2s;
-    margin: 0;
-    overflow: hidden;
+  min-width: 120px;
+  height: 38px;
+  background-color: rgba(171, 12, 0, 1);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0;
+  overflow: hidden;
 }
 
 .result__button_hidden {
@@ -115,7 +115,8 @@
 }
 
 .result__feedback_type_whatsapp {
-  background: url(../../../../../images/whatsapp-logo.png) left/contain no-repeat;
+  background: url(../../../../../images/whatsapp-logo.png) left/contain
+    no-repeat;
 }
 
 .result__feedback-link {

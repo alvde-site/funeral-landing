@@ -8,7 +8,8 @@
   right: 30px;
   width: 36px;
   height: 36px;
-  background: rgba(255,255,255,.5) url(../../../images/svg/arrow.svg) center/262% no-repeat;
+  background: rgba(255, 255, 255, 0.5) url(../../../images/svg/arrow.svg)
+    center/262% no-repeat;
   border-radius: 50%;
   transition: all 1s;
 }

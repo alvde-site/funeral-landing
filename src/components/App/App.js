@@ -11,7 +11,11 @@ import HandleFeedbackPopup from "./HandleFeedbackPopup/HandleFeedbackPopup";
 import ImagePopup from "./ImagePopup/ImagePopup";
 import PopupWithConfirmation from "./PopupWithConfirmation/PopupWithConfirmation";
 import { useFormWithValidation } from "../../utils/formValidator";
-import { portfolioImages, questionsDataList, servicesData } from "../../utils/constants";
+import {
+  portfolioImages,
+  questionsDataList,
+  servicesData,
+} from "../../utils/constants";
 import ScrollUp from "./ScrollUp/ScrollUp";
 import EditClientPopup from "./EditClientPopup/EditClientPopup";
 import InfoTooltip from "./InfoTooltip/InfoTooltip";
@@ -131,7 +135,9 @@ function App() {
   }
 
   function handleOverlayClick(e) {
-    (e.currentTarget === e.target || e.target.classList.contains('swiper-slide')) && closeAllPopups();
+    (e.currentTarget === e.target ||
+      e.target.classList.contains("swiper-slide")) &&
+      closeAllPopups();
   }
 
   function handleCreateClient({ email, phone }) {
