@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { handleTopnavTopPosition } from "../../../../utils/utils";
 import { mtsTel, a1Tel, email } from "../../../../utils/constants";
 import { formattedTel } from "../../../../utils/utils";
 
 function Topnav(props) {
   const topnav = useRef();
+  const [isShownDropdown, setIsShownDropdown] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", getTopPosition);
@@ -19,6 +20,10 @@ function Topnav(props) {
 
   function handleToggleBurger() {
     props.onToggleBurger();
+  }
+
+  function handleShowDropdown(e) {
+    setIsShownDropdown(!isShownDropdown);
   }
 
   return (
@@ -124,10 +129,14 @@ function Topnav(props) {
               </a>
             </li>
             <li className="topnav__dropdown">
-              <button className="topnav__dropdown-button" type="button">
+              <button
+                className="topnav__dropdown-button"
+                type="button"
+                onClick={handleShowDropdown}
+              >
                 Еще
               </button>
-              <ul className="topnav__dropdown-content topnav_on_shadow">
+              <ul className={`topnav__dropdown-content ${!isShownDropdown&&"topnav__dropdown-content_hidden"}`}>
                 <li>
                   <a
                     href="/#faq"
