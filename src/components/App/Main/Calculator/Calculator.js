@@ -65,7 +65,6 @@ function Calculator(props) {
           100) *
           count.lengthcount) /
           100) *
-          2 *
           2
       ) / 2
     ).toFixed(1);
