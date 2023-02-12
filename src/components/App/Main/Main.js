@@ -7,17 +7,12 @@ import Faq from "./Faq/Faq";
 import About from "./About/About";
 import Reviews from "./Reviews/Reviews";
 import Conditions from "./Conditions/Conditions";
-import Topnav from "./Topnav/Topnav";
 import Catalog from "./Catalog/Catalog";
 import Calculator from "./Calculator/Calculator";
 
 function Main(props) {
   return (
     <main className="content">
-      <Topnav
-        onToggleBurger={props.onToggleBurger}
-        isToggleBurger={props.isToggleBurger}
-      />
       <Advertisement />
       <Competence />
       <Catalog onImageClick={props.onImageClick} />

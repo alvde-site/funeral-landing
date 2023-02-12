@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { handleTopnavTopPosition } from "../../../../utils/utils";
-import { mtsTel, a1Tel, email } from "../../../../utils/constants";
-import { formattedTel } from "../../../../utils/utils";
+import { handleTopnavTopPosition } from "../../../utils/utils";
+import { mtsTel, a1Tel, email } from "../../../utils/constants";
+import { formattedTel } from "../../../utils/utils";
 
 function Topnav(props) {
   const topnav = useRef();

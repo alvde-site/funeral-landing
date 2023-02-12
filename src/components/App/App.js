@@ -21,6 +21,7 @@ import EditClientPopup from "./EditClientPopup/EditClientPopup";
 import InfoTooltip from "./InfoTooltip/InfoTooltip";
 import success from "../../images/success.png";
 import fail from "../../images/fail.png";
+import Topnav from "./Topnav/Topnav";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -289,9 +290,11 @@ function App() {
           element={
             <>
               <Header />
-              <Main
+              <Topnav
                 isToggleBurger={isToggleBurger}
                 onToggleBurger={handleToggleBurger}
+              />
+              <Main
                 portfolioImages={portfolioImages}
                 servicesData={servicesData}
                 questionsDataList={questionsDataList}
