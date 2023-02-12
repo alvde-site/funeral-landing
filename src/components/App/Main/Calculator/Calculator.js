@@ -169,6 +169,8 @@ function Calculator(props) {
           handleChangeCount("widthcount", widthCount);
           const extraWidth = getExtraSize(count.tilesize, widthCount);
           handleExtraSize(extraWidth, widthCount, "widthcount");
+          const extraLength = getExtraSize(count.tilesize, count.lengthcount);
+          handleExtraSize(extraLength, count.lengthcount, "lengthcount");
         }
         break;
       case "widthcount":
