@@ -167,6 +167,8 @@ function Calculator(props) {
         const widthCount = count.widthcount < val * 110 ? val * 110 : null;
         if (widthCount) {
           handleChangeCount("widthcount", widthCount);
+          const extraWidth = getExtraSize(count.tilesize, widthCount);
+          handleExtraSize(extraWidth, widthCount, "widthcount");
         }
         break;
       case "widthcount":
@@ -182,9 +184,9 @@ function Calculator(props) {
     }
   }
 
-  function handleExtraSize(extraLength, countItem, inputName) {
+  function handleExtraSize(extraLength, countItemValue, inputName) {
     if (extraLength) {
-      const newValue = Number(countItem) + extraLength;
+      const newValue = Number(countItemValue) + extraLength;
       handleChangeCount(inputName, newValue);
     }
   }
