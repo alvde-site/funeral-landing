@@ -22,9 +22,9 @@ function Calculator(props) {
   };
 
   const priceList = {
-    tile30: 90,
+    tile30: 100,
     tile60: 150,
-    curb: 22,
+    curb: 25,
   };
 
   const [count, setCount] = useState(defaultCount);
@@ -55,7 +55,7 @@ function Calculator(props) {
   }
 
   function calculations(count, priceList) {
-    const tilesCount = (
+    const tilesCount =
       Math.ceil(
         ((((count.onlygraves
           ? count.gravescount > 1
@@ -65,9 +65,9 @@ function Calculator(props) {
           100) *
           count.lengthcount) /
           100) *
-          2
-      ) / 2
-    ).toFixed(1);
+          10
+      ).toFixed(1) / 10;
+    console.log(tilesCount);
     const tilesPrice =
       tilesCount *
       (Number(count.tilesize) === 900 ? priceList.tile30 : priceList.tile60);
